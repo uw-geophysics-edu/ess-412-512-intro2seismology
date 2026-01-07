@@ -55,7 +55,7 @@ See [INSTALL.md](INSTALL.md) for detailed setup instructions. Quick start:
 
 **With Conda (Recommended):**
 ```bash
-git clone https://github.com/UW-/ess-412-512-intro2seismology.git
+git clone https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology.git
 cd ess-412-512-intro2seismology
 conda env create -f environment.yml
 conda activate ess412
@@ -64,7 +64,7 @@ jupyter lab
 
 **With Pixi (Advanced):**
 ```bash
-git clone https://github.com/marinedenolle/ess-412-512-intro2seismology.git
+git clone https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology.git
 cd ess-412-512-intro2seismology
 pixi install
 pixi run lab
