@@ -32,8 +32,8 @@ By the end of this course, students will be able to:
 ```
 ess-412-512-intro2seismology/
 ├── notebooks/
-│   ├── 01_Stress_and_Strain.ipynb              # Elastic constants, stress/strain
-│   ├── 02_Data_FourierTransform.ipynb           # Data handling, Fourier analysis
+│   ├── 01_Data_FourierTransform.ipynb           # Data handling, Fourier analysis, filtering
+│   ├── 02_Stress_and_Strain.ipynb              # Elastic constants, stress/strain relationships
 │   ├── 03_RayTracing_BodyWaves.ipynb            # Ray theory, travel times
 │   ├── 04_Global_Phases.ipynb                   # Body wave identification
 │   ├── 05_SurfaceWaves_Theory_Analysis.ipynb    # Surface waves, dispersion
@@ -72,7 +72,7 @@ pixi run lab
 
 ### First Steps
 
-1. Start with [01_Stress_and_Strain.ipynb](notebooks/01_Stress_and_Strain.ipynb) to review elastic fundamentals
+1. Start with [01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb) to learn data handling and signal processing
 2. Follow notebooks in numerical order (01 → 07)
 3. Each notebook includes theory, demonstrations, and exercises
 4. ESS 512 students should complete additional graduate-level exercises marked in each notebook
@@ -83,8 +83,8 @@ pixi run lab
 
 | Week | Shearer Ch. | Notebook(s) | Topics |
 |------|------------|-------------|--------|
-| 1 | 2 | [01_Stress_and_Strain.ipynb](notebooks/01_Stress_and_Strain.ipynb) | Elastic constants, stress-strain relationships, Lamé parameters |
-| 2 | 3 | [02_Data_FourierTransform.ipynb](notebooks/02_Data_FourierTransform.ipynb) | Seismic data, instrument response, Fourier analysis, filtering |
+| 1 | 3 | [01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb) | Seismic data access, instrument response, Fourier analysis, filtering |
+| 2 | 2 | [02_Stress_and_Strain.ipynb](notebooks/02_Stress_and_Strain.ipynb) | Elastic constants, stress-strain relationships, Lamé parameters |
 | 3 | 4 | [03_RayTracing_BodyWaves.ipynb](notebooks/03_RayTracing_BodyWaves.ipynb) | Ray parameter, travel time curves, Snell's law |
 | 4 | 4-5 | [04_Global_Phases.ipynb](notebooks/04_Global_Phases.ipynb), [07_ComputerProgram1_Assignment.ipynb](notebooks/07_ComputerProgram1_Assignment.ipynb) | Phase identification, real data analysis, TauP |
 | 5 | 7 | [05_SurfaceWaves_Theory_Analysis.ipynb](notebooks/05_SurfaceWaves_Theory_Analysis.ipynb) (Part 1) | Love waves, Rayleigh waves, dispersion theory |
@@ -95,13 +95,13 @@ pixi run lab
 
 ### Prerequisites by Notebook
 
-- **01**: None (foundational material)
-- **02**: Basic Python, 01 recommended
+- **01**: None (start here - foundational data skills)
+- **02**: 01 recommended (for working with seismic data)
 - **03**: 01, 02
-- **04**: 02, 03
-- **05**: 02 (Fourier analysis is critical), 03 (contrast with ray theory)
-- **06**: 02, 05
-- **07**: 02, 03, 04
+- **04**: 01, 03
+- **05**: 01 (Fourier analysis is critical), 03 (contrast with ray theory)
+- **06**: 01, 05
+- **07**: 01, 03, 04
 
 ## ESS 412 vs ESS 512 Differentiation
 
