@@ -33,13 +33,17 @@ By the end of this course, students will be able to:
 ess-412-512-intro2seismology/
 ├── notebooks/
 │   ├── 01_Data_FourierTransform.ipynb           # Data handling, Fourier analysis, filtering
-│   ├── 02_Stress_and_Strain.ipynb              # Elastic constants, stress/strain relationships
+│   ├── 02_Stress_and_Strain.ipynb              # Elastic constants, stress/strain (original)
+│   ├── 02_Stress_Strain_Lecture.md             # NEW: Lecture notes for stress/strain module
+│   ├── 02_Stress_Strain_Test.ipynb             # NEW: 50-min in-class exercise
 │   ├── 03_RayTracing_BodyWaves.ipynb            # Ray theory, travel times
 │   ├── 04_Global_Phases.ipynb                   # Body wave identification
 │   ├── 05_SurfaceWaves_Theory_Analysis.ipynb    # Surface waves, dispersion
 │   ├── 06_Noise_CrossCorrelation.ipynb          # Ambient noise methods
 │   ├── 07_ComputerProgram1_Assignment.ipynb     # Formal graded assignment
-│   └── solutions/                                # Instructor solutions (private)
+│   └── solutions/
+│       ├── 02_Stress_Strain_Solutions.ipynb     # NEW: Solution key with grading rubric
+│       └── Graduate_Paper_Presentation.md
 ├── environment.yml                               # Conda environment
 ├── pixi.toml                                     # Pixi configuration (alternative)
 ├── INSTALL.md                                    # Detailed setup instructions
@@ -89,7 +93,7 @@ pixi install
 | Week | Shearer Ch. | Notebook(s) | Topics |
 |------|------------|-------------|--------|
 | 1 | 3 | [01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb) | Seismic data access, instrument response, Fourier analysis, filtering |
-| 2 | 2 | [02_Stress_and_Strain.ipynb](notebooks/02_Stress_and_Strain.ipynb) | Elastic constants, stress-strain relationships, Lamé parameters |
+| 2 | 2 | [02_Stress_Strain_Lecture.md](notebooks/02_Stress_Strain_Lecture.md), [02_Stress_Strain_Test.ipynb](notebooks/02_Stress_Strain_Test.ipynb) | Elastic constants, stress-strain relationships, Lamé parameters, eigenvalue analysis |
 | 3 | 4 | [03_RayTracing_BodyWaves.ipynb](notebooks/03_RayTracing_BodyWaves.ipynb) | Ray parameter, travel time curves, Snell's law |
 | 4 | 4-5 | [04_Global_Phases.ipynb](notebooks/04_Global_Phases.ipynb), [07_ComputerProgram1_Assignment.ipynb](notebooks/07_ComputerProgram1_Assignment.ipynb) | Phase identification, real data analysis, TauP |
 | 5 | 7 | [05_SurfaceWaves_Theory_Analysis.ipynb](notebooks/05_SurfaceWaves_Theory_Analysis.ipynb) (Part 1) | Love waves, Rayleigh waves, dispersion theory |
@@ -97,6 +101,22 @@ pixi install
 | 7 | 9 | [06_Noise_CrossCorrelation.ipynb](notebooks/06_Noise_CrossCorrelation.ipynb) | Ambient noise, virtual sources, Green's function extraction |
 | 8 | Various | Student projects | Application to real problems |
 | 9-10 | - | Final projects | ESS 512: Paper presentations |
+
+### Lecture Notes and Teaching Materials
+
+Several modules include **dedicated lecture notes** designed for 15-20 minute focused lectures:
+
+- **[02_Stress_Strain_Lecture.md](notebooks/02_Stress_Strain_Lecture.md)**: Comprehensive lecture on elastic constants, Hooke's Law, geodetic strain measurements, and eigenvalue analysis. Includes worked examples and physical interpretations.
+  - **Companion exercise**: [02_Stress_Strain_Test.ipynb](notebooks/02_Stress_Strain_Test.ipynb) - 50-minute in-class exercise with tiered difficulty (parts a-e for ESS 412; part f for ESS 512)
+  - **Solution key**: [solutions/02_Stress_Strain_Solutions.ipynb](notebooks/solutions/02_Stress_Strain_Solutions.ipynb) - Complete solutions, grading rubric, common student errors
+  - **Hand-sketch component**: Students visualize principal stress orientations on compass rose
+
+Lecture notes provide:
+- Compact presentation of key concepts and derivations
+- Real-world context (e.g., Pinon Flat Observatory, 1992 Landers earthquake)
+- Worked numerical examples with units
+- Prerequisites for computational exercises
+- Can be used as pre-class reading (flipped classroom) or live presentation
 
 ### Prerequisites by Notebook
 
