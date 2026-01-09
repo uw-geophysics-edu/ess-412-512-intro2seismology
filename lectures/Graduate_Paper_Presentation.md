@@ -65,7 +65,7 @@ Your paper should connect to at least one of our computational modules:
 
 ### Paper Approval Process
 
-1. **Week 3**: Submit 3 paper candidates to instructor via email
+1. **Week 3**: Submit 3 paper candidates to instructor via canvas
    - Include full citations
    - Brief (2-3 sentence) description of why each interests you
    - Which computational module(s) it connects to
@@ -128,7 +128,7 @@ Your presentation **must** include:
   - How could methods be improved?
 
 #### 6. Connection to Course
-- Which notebook(s) relate to this work?
+- Which lectures relate to this work?
 - What extensions could we implement in class?
 - What did you learn that enhances your understanding of course material?
 
