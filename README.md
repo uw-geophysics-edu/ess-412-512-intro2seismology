@@ -34,16 +34,17 @@ ess-412-512-intro2seismology/
 ├── notebooks/
 │   ├── 01_Data_FourierTransform.ipynb           # Data handling, Fourier analysis, filtering
 │   ├── 02_Stress_and_Strain.ipynb              # Elastic constants, stress/strain (original)
-│   ├── 02_Stress_Strain_Lecture.md             # NEW: Lecture notes for stress/strain module
-│   ├── 02_Stress_Strain_Test.ipynb             # NEW: 50-min in-class exercise
+│   ├── 02_Stress_Strain_Lecture.md             # Lecture notes for stress/strain module
+│   ├── 02_Stress_Strain_Test.ipynb             # 50-min in-class exercise
 │   ├── 03_RayTracing_BodyWaves.ipynb            # Ray theory, travel times
 │   ├── 04_Global_Phases.ipynb                   # Body wave identification
 │   ├── 05_SurfaceWaves_Theory_Analysis.ipynb    # Surface waves, dispersion
 │   ├── 06_Noise_CrossCorrelation.ipynb          # Ambient noise methods
 │   ├── 07_ComputerProgram1_Assignment.ipynb     # Formal graded assignment
-│   └── solutions/
-│       ├── 02_Stress_Strain_Solutions.ipynb     # NEW: Solution key with grading rubric
-│       └── Graduate_Paper_Presentation.md
+│   └── solutions/                               # Instructor-only (gitignored)
+├── lectures/
+│   ├── Graduate_Paper_Presentation.md           # ESS 512 assignment guidelines
+│   └── (add future lecture notes here)
 ├── environment.yml                               # Conda environment
 ├── pixi.toml                                     # Pixi configuration (alternative)
 ├── INSTALL.md                                    # Detailed setup instructions
