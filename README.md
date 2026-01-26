@@ -31,24 +31,26 @@ By the end of this course, students will be able to:
 
 ```
 ess-412-512-intro2seismology/
-├── notebooks/
+├── notebooks/                                    # Computational exercises (numbered in order)
 │   ├── 01_Data_FourierTransform.ipynb           # Data handling, Fourier analysis, filtering
-│   ├── 02_Stress_and_Strain.ipynb              # Elastic constants, stress/strain (original)
-│   ├── 02_Stress_Strain_Lecture.md             # Lecture notes for stress/strain module
-│   ├── 02_Stress_Strain_Test.ipynb             # 50-min in-class exercise
-│   ├── 03_RayTracing_BodyWaves.ipynb            # Ray theory, travel times
-│   ├── 04_Global_Phases.ipynb                   # Body wave identification
-│   ├── 05_SurfaceWaves_Theory_Analysis.ipynb    # Surface waves, dispersion
-│   ├── 06_Noise_CrossCorrelation.ipynb          # Ambient noise methods
-│   ├── 07_ComputerProgram1_Assignment.ipynb     # Formal graded assignment
-│   └── solutions/                               # Instructor-only (gitignored)
-├── lectures/
-│   ├── Graduate_Paper_Presentation.md           # ESS 512 assignment guidelines
-│   └── (add future lecture notes here)
-├── environment.yml                               # Conda environment
+│   ├── 02_Stress_and_Strain.ipynb              # Elastic constants, stress/strain relationships
+│   ├── 02_Stress_Strain_Test.ipynb             # 50-min in-class exercise (stress/strain)
+│   ├── 03_chapter3_wrapup.ipynb                # Body waves analysis and polarization
+│   ├── 04_RayleighWaves_Theory.ipynb           # Rayleigh wave theory and derivations
+│   ├── 05_SurfaceWaves_Practicum.ipynb         # Surface wave dispersion measurement
+│   ├── 06_RayTracing_BodyWaves.ipynb           # Ray theory, travel times, Snell's law
+│   ├── 07_Global_Phases.ipynb                  # Body wave phase identification
+│   ├── 08_Noise_CrossCorrelation.ipynb         # Ambient noise interferometry
+│   └── HWK1_ComputerProgram1_Assignment.ipynb  # Formal graded assignment
+├── solutions/                                    # Instructor-only solutions (gitignored)
+│   └── 02_Stress_Strain_Solutions.ipynb        # Example solution with rubric
+├── lectures/                                     # Lecture notes and teaching materials
+│   ├── 02_Stress_Strain_Lecture.md             # Stress/strain lecture notes
+│   └── Graduate_Paper_Presentation.md          # ESS 512: Paper presentation guidelines
+├── environment.yml                               # Conda environment specification
 ├── pixi.toml                                     # Pixi configuration (alternative)
 ├── INSTALL.md                                    # Detailed setup instructions
-├── LICENSE
+├── LICENSE                                       # MIT License
 └── README.md                                     # This file
 ```
 
@@ -83,51 +85,157 @@ pixi install
 ### First Steps
 
 1. Start with [01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb) to learn data handling and signal processing
-2. Follow notebooks in numerical order (01 → 07)
+2. Follow notebooks in numerical order (01 → 08, plus HWK1)
 3. Each notebook includes theory, demonstrations, and exercises
 4. ESS 512 students should complete additional graduate-level exercises marked in each notebook
 
+## Course Content by Theme
+
+The course is organized around core seismological concepts, with notebooks progressing from data fundamentals through wave theory to advanced applications.
+
+### Module 1: Data Foundations and Signal Processing
+**Learning Goal**: Master seismic data acquisition and spectral analysis techniques
+
+- **[01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb)** (Week 1)
+  - Shearer Chapter 3
+  - Downloading seismic data from IRIS/FDSN
+  - Instrument response removal
+  - Fourier analysis and filtering
+  - Spectral analysis of earthquakes
+
+### Module 2: Stress, Strain, and Elasticity
+**Learning Goal**: Connect elastic wave theory to material deformation
+
+- **Lecture**: [02_Stress_Strain_Lecture.md](lectures/02_Stress_Strain_Lecture.md) (Week 2)
+  - Shearer Chapter 2
+  - Stress and strain tensors
+  - Hooke's Law and elastic constants
+  - Lamé parameters and wave speeds
+  - Real-world geodetic examples (1992 Landers earthquake)
+  
+- **[02_Stress_and_Strain.ipynb](notebooks/02_Stress_and_Strain.ipynb)** (Week 2)
+  - Eigenvalue analysis of stress/strain tensors
+  - Principal stress directions
+  - Computational implementation of elastic relationships
+  
+- **[02_Stress_Strain_Test.ipynb](notebooks/02_Stress_Strain_Test.ipynb)** (Week 2)
+  - 50-minute in-class assessment
+  - Tiered difficulty: Parts a-e (ESS 412), Part f (ESS 512)
+  - Hand-sketch visualization component
+  - **Solution**: [solutions/02_Stress_Strain_Solutions.ipynb](solutions/02_Stress_Strain_Solutions.ipynb)
+
+### Module 3: Body Waves and Ray Theory
+**Learning Goal**: Understand P and S wave propagation through Earth structure
+
+- **[03_chapter3_wrapup.ipynb](notebooks/03_chapter3_wrapup.ipynb)** (Week 3)
+  - Shearer Chapter 3
+  - P/S wave separation using polarization
+  - Rectilinearity analysis
+  - Particle motion visualization in Z-R-T coordinates
+  - Divergence and curl for wave-type identification
+  
+- **[06_RayTracing_BodyWaves.ipynb](notebooks/06_RayTracing_BodyWaves.ipynb)** (Week 3-4)
+  - Shearer Chapter 4
+  - Snell's law and ray parameters
+  - Travel time curves
+  - Ray path computation through layered media
+  
+- **[07_Global_Phases.ipynb](notebooks/07_Global_Phases.ipynb)** (Week 4)
+  - Shearer Chapters 4-5
+  - Body wave phase identification (P, S, PcP, ScS, PKP, etc.)
+  - TauP toolkit for phase predictions
+  - Real data analysis of global earthquakes
+
+### Module 4: Surface Waves
+**Learning Goal**: Analyze dispersive surface wave propagation and Earth structure
+
+- **[04_RayleighWaves_Theory.ipynb](notebooks/04_RayleighWaves_Theory.ipynb)** (Week 5)
+  - Shearer Chapter 7
+  - Rayleigh wave theory and derivations
+  - Particle motion (retrograde elliptical)
+  - Dispersion relationships
+  
+- **[05_SurfaceWaves_Practicum.ipynb](notebooks/05_SurfaceWaves_Practicum.ipynb)** (Week 6)
+  - Shearer Chapter 7
+  - Group velocity vs. phase velocity
+  - Dispersion measurement from real data
+  - Multiple-filter technique
+  - Inverting dispersion for velocity structure
+
+### Module 5: Advanced Methods
+**Learning Goal**: Apply modern seismological techniques to ambient noise
+
+- **[08_Noise_CrossCorrelation.ipynb](notebooks/08_Noise_CrossCorrelation.ipynb)** (Week 7)
+  - Shearer Chapter 9
+  - Ambient noise seismology
+  - Cross-correlation and Green's function extraction
+  - Virtual source concept
+  - Surface wave extraction from noise
+
+### Assessment
+- **[HWK1_ComputerProgram1_Assignment.ipynb](notebooks/HWK1_ComputerProgram1_Assignment.ipynb)**
+  - Formal graded assignment
+  - Integrates concepts from multiple modules
+  - Independent data analysis and interpretation
+
+## Lecture Notes and Teaching Materials
+
+The `lectures/` directory contains focused teaching materials designed for efficient knowledge transfer:
+
+### Available Lecture Notes
+
+- **[02_Stress_Strain_Lecture.md](lectures/02_Stress_Strain_Lecture.md)**: 
+  - 15-20 minute lecture on elastic wave fundamentals
+  - Comprehensive coverage: stress/strain tensors, Hooke's Law, wave speeds
+  - Real-world geodetic examples (Pinon Flat Observatory, 1992 Landers earthquake)
+  - Worked numerical examples with physical units
+  - Designed for pre-class reading (flipped classroom) or live presentation
+
+### Graduate Student Resources
+
+- **[Graduate_Paper_Presentation.md](lectures/Graduate_Paper_Presentation.md)**: 
+  - ESS 512 only: How to prepare a research paper presentation
+  - Selecting papers that connect course methods to published research
+  - Presentation structure and best practices
+  - Critical evaluation of methodology
+  - Rubric and expectations
+
+### Using Lecture Materials
+
+**Lecture notes** provide:
+- Compact theoretical foundations before computational work
+- Real-world seismological context
+- Mathematical derivations with physical interpretation
+- Bridge between textbook reading and hands-on exercises
+- Flexibility: Use as pre-class reading, live lecture, or reference material
+
 ## Course Schedule
 
-### Weekly Progression (10-week quarter)
+### Typical 10-Week Quarter Progression
 
-| Week | Shearer Ch. | Notebook(s) | Topics |
-|------|------------|-------------|--------|
-| 1 | 3 | [01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb) | Seismic data access, instrument response, Fourier analysis, filtering |
-| 2 | 2 | [02_Stress_Strain_Lecture.md](notebooks/02_Stress_Strain_Lecture.md), [02_Stress_Strain_Test.ipynb](notebooks/02_Stress_Strain_Test.ipynb) | Elastic constants, stress-strain relationships, Lamé parameters, eigenvalue analysis |
-| 3 | 4 | [03_RayTracing_BodyWaves.ipynb](notebooks/03_RayTracing_BodyWaves.ipynb) | Ray parameter, travel time curves, Snell's law |
-| 4 | 4-5 | [04_Global_Phases.ipynb](notebooks/04_Global_Phases.ipynb), [07_ComputerProgram1_Assignment.ipynb](notebooks/07_ComputerProgram1_Assignment.ipynb) | Phase identification, real data analysis, TauP |
-| 5 | 7 | [05_SurfaceWaves_Theory_Analysis.ipynb](notebooks/05_SurfaceWaves_Theory_Analysis.ipynb) (Part 1) | Love waves, Rayleigh waves, dispersion theory |
-| 6 | 7 | [05_SurfaceWaves_Theory_Analysis.ipynb](notebooks/05_SurfaceWaves_Theory_Analysis.ipynb) (Part 2) | Group velocity, phase velocity, dispersion measurement |
-| 7 | 9 | [06_Noise_CrossCorrelation.ipynb](notebooks/06_Noise_CrossCorrelation.ipynb) | Ambient noise, virtual sources, Green's function extraction |
-| 8 | Various | Student projects | Application to real problems |
-| 9-10 | - | Final projects | ESS 512: Paper presentations |
-
-### Lecture Notes and Teaching Materials
-
-Several modules include **dedicated lecture notes** designed for 15-20 minute focused lectures:
-
-- **[02_Stress_Strain_Lecture.md](notebooks/02_Stress_Strain_Lecture.md)**: Comprehensive lecture on elastic constants, Hooke's Law, geodetic strain measurements, and eigenvalue analysis. Includes worked examples and physical interpretations.
-  - **Companion exercise**: [02_Stress_Strain_Test.ipynb](notebooks/02_Stress_Strain_Test.ipynb) - 50-minute in-class exercise with tiered difficulty (parts a-e for ESS 412; part f for ESS 512)
-  - **Solution key**: [solutions/02_Stress_Strain_Solutions.ipynb](notebooks/solutions/02_Stress_Strain_Solutions.ipynb) - Complete solutions, grading rubric, common student errors
-  - **Hand-sketch component**: Students visualize principal stress orientations on compass rose
-
-Lecture notes provide:
-- Compact presentation of key concepts and derivations
-- Real-world context (e.g., Pinon Flat Observatory, 1992 Landers earthquake)
-- Worked numerical examples with units
-- Prerequisites for computational exercises
-- Can be used as pre-class reading (flipped classroom) or live presentation
+| Week | Theme | Materials | Topics |
+|------|-------|-----------|--------|
+| 1 | Data Foundations | Notebook 01 | FDSN data access, instrument response, Fourier analysis, filtering |
+| 2 | Stress & Strain | Lecture 02, Notebooks 02, Test 02 | Elastic constants, stress/strain tensors, Hooke's Law, eigenvalue analysis |
+| 3 | Body Waves I | Notebook 03 | P/S separation, polarization, rectilinearity, particle motion |
+| 4 | Body Waves II | Notebooks 06-07 | Ray tracing, travel times, global phases, TauP toolkit |
+| 5 | Surface Waves I | Notebook 04 | Rayleigh wave theory, dispersion, particle motion |
+| 6 | Surface Waves II | Notebook 05 | Group/phase velocity, dispersion measurement, inversion |
+| 7 | Advanced Methods | Notebook 08 | Ambient noise, cross-correlation, Green's functions |
+| 8 | Integration | HWK1 | Comprehensive assignment applying multiple methods |
+| 9-10 | Synthesis | Student projects/presentations | ESS 512: Research paper presentations |
 
 ### Prerequisites by Notebook
 
-- **01**: None (start here - foundational data skills)
-- **02**: 01 recommended (for working with seismic data)
-- **03**: 01, 02
-- **04**: 01, 03
-- **05**: 01 (Fourier analysis is critical), 03 (contrast with ray theory)
-- **06**: 01, 05
-- **07**: 01, 03, 04
+- **01**: None (foundational - start here)
+- **02**: 01 recommended (for data handling context)
+- **03**: 01 (Fourier analysis), 02 (wave propagation theory)
+- **04**: 01 (spectral analysis critical)
+- **05**: 01, 04 (builds on dispersion theory)
+- **06**: 01, 02, 03 (ray theory after wave fundamentals)
+- **07**: 01, 06 (uses ray tracing and TauP)
+- **08**: 01, 05 (cross-correlation builds on filtering/dispersion)
+- **HWK1**: 01, 06, 07 (integrative assignment)
 
 ## ESS 412 vs ESS 512 Differentiation
 
@@ -155,7 +263,7 @@ ESS 512 students will present one published research paper (distributed througho
 - Publication best practices (reproducible code, clear figures, method documentation)
 - Critical evaluation of methodology and results
 
-See [notebooks/solutions/Graduate_Paper_Presentation.md](notebooks/solutions/Graduate_Paper_Presentation.md) for guidelines and rubric.
+See [lectures/Graduate_Paper_Presentation.md](lectures/Graduate_Paper_Presentation.md) for complete guidelines, rubric, and presentation expectations.
 
 ## Key Dependencies
 

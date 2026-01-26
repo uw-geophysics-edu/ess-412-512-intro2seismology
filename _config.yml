@@ -1,0 +1,35 @@
+# Book settings
+title: "ESS 412/512: Introduction to Seismology"
+author: Marine Denolle
+copyright: "2026"
+
+# Don't execute notebooks (they require data downloads)
+execute:
+  execute_notebooks: off
+
+# Repository information
+repository:
+  url: https://github.com/marinedenolle/ess-412-512-intro2seismology
+  branch: main
+
+# Add GitHub buttons
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  baseurl: https://marinedenolle.github.io/ess-412-512-intro2seismology/
+
+# Launch buttons for students
+launch_buttons:
+  notebook_interface: jupyterlab
+  binderhub_url: https://mybinder.org
+  colab_url: https://colab.research.google.com
+
+# Enable search and advanced features
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - dollarmath
+    - linkify
+    - smartquotes
+    - substitution

@@ -1,0 +1,49 @@
+format: jb-book
+root: README
+chapters:
+  - file: INSTALL
+    title: Installation Guide
+
+  - file: lectures/02_Stress_Strain_Lecture
+    title: "Lecture: Stress & Strain Fundamentals"
+
+  - file: lectures/Graduate_Paper_Presentation
+    title: "Graduate Guidelines (ESS 512)"
+
+  - caption: Module 1 - Data Foundations
+    chapters:
+      - file: notebooks/01_Data_FourierTransform
+        title: "Lab 1: Data & Fourier Analysis"
+
+  - caption: Module 2 - Stress & Strain
+    chapters:
+      - file: notebooks/02_Stress_and_Strain
+        title: "Lab 2: Stress and Strain"
+      - file: notebooks/02_Stress_Strain_Test
+        title: "In-Class Exercise"
+
+  - caption: Module 3 - Body Waves
+    chapters:
+      - file: notebooks/03_chapter3_wrapup
+        title: "Lab 3: Body Wave Polarization"
+      - file: notebooks/06_RayTracing_BodyWaves
+        title: "Lab 6: Ray Tracing"
+      - file: notebooks/07_Global_Phases
+        title: "Lab 7: Global Phases"
+
+  - caption: Module 4 - Surface Waves
+    chapters:
+      - file: notebooks/04_RayleighWaves_Theory
+        title: "Lab 4: Rayleigh Waves"
+      - file: notebooks/05_SurfaceWaves_Practicum
+        title: "Lab 5: Dispersion Analysis"
+
+  - caption: Module 5 - Advanced Methods
+    chapters:
+      - file: notebooks/08_Noise_CrossCorrelation
+        title: "Lab 8: Ambient Noise"
+
+  - caption: Assignments
+    chapters:
+      - file: notebooks/HWK1_ComputerProgram1_Assignment
+        title: "Homework 1"

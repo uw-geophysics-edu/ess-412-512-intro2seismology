@@ -31,6 +31,11 @@ ENV/
 env.bak/
 venv.bak/
 .pixi/
+.venv-jb/
+
+# Jupyter Book build artifacts
+_build/
+.jupyter_cache/
 
 # IDEs
 .vscode/
