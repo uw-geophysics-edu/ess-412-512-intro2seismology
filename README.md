@@ -307,7 +307,7 @@ This work is licensed under the MIT License - see [LICENSE](LICENSE) file for de
 
 **Instructor**: Marine Denolle  
 **Course**: ESS 412/512, University of Washington  
-**Repository**: https://github.com/marinedenolle/ess-412-512-intro2seismology
+**Repository**: https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology
 
 For course-related questions, use Canvas discussion board. For repository issues, use GitHub Issues.
 

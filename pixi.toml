@@ -21,6 +21,7 @@ ipywidgets = ">=7.6"
 # Additional packages for better visualization and analysis
 seaborn = ">=0.11"
 plotly = ">=5.0"
+jupyter-book = ">=2.1.1,<3"
 
 [feature.graduate]
 dependencies = {scikit-learn = ">=1.0", h5py = ">=3.0", netcdf4 = ">=1.5"}

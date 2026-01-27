@@ -1,15 +1,6 @@
 format: jb-book
 root: README
-chapters:
-  - file: INSTALL
-    title: Installation Guide
-
-  - file: lectures/02_Stress_Strain_Lecture
-    title: "Lecture: Stress & Strain Fundamentals"
-
-  - file: lectures/Graduate_Paper_Presentation
-    title: "Graduate Guidelines (ESS 512)"
-
+parts:
   - caption: Module 1 - Data Foundations
     chapters:
       - file: notebooks/01_Data_FourierTransform
@@ -17,6 +8,8 @@ chapters:
 
   - caption: Module 2 - Stress & Strain
     chapters:
+      - file: lectures/02_Stress_Strain_Lecture
+        title: "Lecture: Stress & Strain Fundamentals"
       - file: notebooks/02_Stress_and_Strain
         title: "Lab 2: Stress and Strain"
       - file: notebooks/02_Stress_Strain_Test
@@ -33,10 +26,14 @@ chapters:
 
   - caption: Module 4 - Surface Waves
     chapters:
+      - file: lectures/surface-waves
+        title: "Lecture: Surface Waves - Rayleigh & Love"
       - file: notebooks/04_RayleighWaves_Theory
         title: "Lab 4: Rayleigh Waves"
       - file: notebooks/05_SurfaceWaves_Practicum
         title: "Lab 5: Dispersion Analysis"
+      - file: notebooks/06_Love_waves
+        title: "Lab 6: Love Waves"
 
   - caption: Module 5 - Advanced Methods
     chapters:
@@ -45,5 +42,7 @@ chapters:
 
   - caption: Assignments
     chapters:
+      - file: lectures/Graduate_Paper_Presentation
+        title: "Graduate Guidelines - ESS 512"
       - file: notebooks/HWK1_ComputerProgram1_Assignment
         title: "Homework 1"

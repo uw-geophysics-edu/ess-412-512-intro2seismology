@@ -30,7 +30,7 @@ jobs:
       - name: Build book
         run: jupyter-book build .
       
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: ./_build/html
 

@@ -9,7 +9,7 @@ execute:
 
 # Repository information
 repository:
-  url: https://github.com/marinedenolle/ess-412-512-intro2seismology
+  url: https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology
   branch: main
 
 # Add GitHub buttons
@@ -17,7 +17,7 @@ html:
   use_issues_button: true
   use_repository_button: true
   use_edit_page_button: true
-  baseurl: https://marinedenolle.github.io/ess-412-512-intro2seismology/
+  baseurl: https://uw-geophysics-edu.github.io/ess-412-512-intro2seismology/
 
 # Launch buttons for students
 launch_buttons:
@@ -33,3 +33,15 @@ parse:
     - linkify
     - smartquotes
     - substitution
+
+sphinx:
+  config:
+    exclude_patterns:
+      - ".pixi/**"
+      - ".venv/**"
+      - ".venv-jb/**"
+      - "**/node_modules/**"
+      - "**/site-packages/**"
+      - "_build/**"
+      - "**/.ipynb_checkpoints/**"
+
