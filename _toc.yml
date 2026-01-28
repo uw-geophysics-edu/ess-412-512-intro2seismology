@@ -19,6 +19,8 @@ parts:
     chapters:
       - file: notebooks/03_chapter3_wrapup
         title: "Lab 3: Body Wave Polarization"
+      - file: lectures/ray-theory
+        title: "Lecture: Ray Theory"
       - file: notebooks/06_RayTracing_BodyWaves
         title: "Lab 6: Ray Tracing"
       - file: notebooks/07_Global_Phases

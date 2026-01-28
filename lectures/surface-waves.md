@@ -13,6 +13,7 @@
 
 ## Love Waves (transverse, SH)
 - SH confined to a low-velocity layer over a faster half-space yields:
+
   $$\tan(k_{z1} h) = \frac{\rho_2 k_{z1}}{\rho_1 k_{z2}}$$
   leading to discrete modes and dispersion curves $c_L(f)$.
 - Particle motion: horizontal, transverse to propagation.
@@ -26,8 +27,3 @@
 - Lab 5 (practicum): measure dispersion (MFT, phase/group velocities).
 - Lab 6 (Love waves): focus on SH-guided waves; compare with Rayleigh.
 - Use these lecture notes for equations; keep notebooks focused on computation.
-
-## Quality Checks Before Publishing
-- Ensure markdown math uses $...$ or $$...$$.
-- Figures: confirm captions and axis labels are clear.
-- Cross-links: add references to Labs 4–6 where relevant.

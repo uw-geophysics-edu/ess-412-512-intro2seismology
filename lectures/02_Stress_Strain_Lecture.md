@@ -363,6 +363,4 @@ azimuth = np.degrees(np.arctan2(eigenvectors[0, 0], eigenvectors[1, 0]))
 
 ## 10. References & Further Reading
 - **1992 Landers Earthquake:** Wald & Heaton (1994), *BSSA*
----
 
-**Next:** Apply these concepts to real Pinon Flat Observatory data in today's test exercise!

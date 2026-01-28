@@ -39,6 +39,7 @@ ess-412-512-intro2seismology/
 │   ├── 04_RayleighWaves_Theory.ipynb           # Rayleigh wave theory and derivations
 │   ├── 05_SurfaceWaves_Practicum.ipynb         # Surface wave dispersion measurement
 │   ├── 06_RayTracing_BodyWaves.ipynb           # Ray theory, travel times, Snell's law
+│   ├── 06_Love_waves.ipynb                     # Love wave theory and analysis
 │   ├── 07_Global_Phases.ipynb                  # Body wave phase identification
 │   ├── 08_Noise_CrossCorrelation.ipynb         # Ambient noise interferometry
 │   └── HWK1_ComputerProgram1_Assignment.ipynb  # Formal graded assignment
@@ -46,6 +47,7 @@ ess-412-512-intro2seismology/
 │   └── 02_Stress_Strain_Solutions.ipynb        # Example solution with rubric
 ├── lectures/                                     # Lecture notes and teaching materials
 │   ├── 02_Stress_Strain_Lecture.md             # Stress/strain lecture notes
+│   ├── surface-waves.md                        # Surface wave theory (Rayleigh & Love)
 │   └── Graduate_Paper_Presentation.md          # ESS 512: Paper presentation guidelines
 ├── environment.yml                               # Conda environment specification
 ├── pixi.toml                                     # Pixi configuration (alternative)
@@ -82,8 +84,14 @@ cd ess-412-512-intro2seismology
 pixi install
 ```
 
-### First Steps
+### Access the Course
 
+**Interactive Jupyter Book** (Recommended for students):
+- View: https://uw-geophysics-edu.github.io/ess-412-512-intro2seismology/
+- Fully searchable, with launch buttons for Binder and Google Colab
+- All lectures, labs, and assignments in one place
+
+**Local Setup** (For development or offline work):
 1. Start with [01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb) to learn data handling and signal processing
 2. Follow notebooks in numerical order (01 → 08, plus HWK1)
 3. Each notebook includes theory, demonstrations, and exercises
@@ -149,18 +157,32 @@ The course is organized around core seismological concepts, with notebooks progr
 ### Module 4: Surface Waves
 **Learning Goal**: Analyze dispersive surface wave propagation and Earth structure
 
+- **Lecture**: [surface-waves.md](lectures/surface-waves.md) (Week 5)
+  - Shearer Chapter 7
+  - Rayleigh and Love wave theory
+  - Derivation of dispersion relations
+  - Particle motion characteristics
+  - Practical workflow connecting theory to lab exercises
+
 - **[04_RayleighWaves_Theory.ipynb](notebooks/04_RayleighWaves_Theory.ipynb)** (Week 5)
   - Shearer Chapter 7
-  - Rayleigh wave theory and derivations
+  - Rayleigh wave theory and numerical analysis
   - Particle motion (retrograde elliptical)
-  - Dispersion relationships
+  - Dispersion relationships and computation
   
 - **[05_SurfaceWaves_Practicum.ipynb](notebooks/05_SurfaceWaves_Practicum.ipynb)** (Week 6)
   - Shearer Chapter 7
   - Group velocity vs. phase velocity
   - Dispersion measurement from real data
-  - Multiple-filter technique
+  - Multiple-filter technique (MFT)
   - Inverting dispersion for velocity structure
+
+- **[06_Love_waves.ipynb](notebooks/06_Love_waves.ipynb)** (Week 6)
+  - Shearer Chapter 7
+  - Love wave theory: SH-guided waves in layered media
+  - Particle motion and energy distribution
+  - Comparison with Rayleigh waves
+  - Dispersion analysis of Love waves
 
 ### Module 5: Advanced Methods
 **Learning Goal**: Apply modern seismological techniques to ambient noise
@@ -191,6 +213,13 @@ The `lectures/` directory contains focused teaching materials designed for effic
   - Worked numerical examples with physical units
   - Designed for pre-class reading (flipped classroom) or live presentation
 
+- **[surface-waves.md](lectures/surface-waves.md)**:
+  - Rayleigh and Love wave theory in one place
+  - Dispersion relations and derivations with LaTeX equations
+  - Particle motion characteristics
+  - Workflow connecting theory to Labs 4–6
+  - Avoids duplication between theory and practicum notebooks
+
 ### Graduate Student Resources
 
 - **[Graduate_Paper_Presentation.md](lectures/Graduate_Paper_Presentation.md)**: 
@@ -219,8 +248,8 @@ The `lectures/` directory contains focused teaching materials designed for effic
 | 2 | Stress & Strain | Lecture 02, Notebooks 02, Test 02 | Elastic constants, stress/strain tensors, Hooke's Law, eigenvalue analysis |
 | 3 | Body Waves I | Notebook 03 | P/S separation, polarization, rectilinearity, particle motion |
 | 4 | Body Waves II | Notebooks 06-07 | Ray tracing, travel times, global phases, TauP toolkit |
-| 5 | Surface Waves I | Notebook 04 | Rayleigh wave theory, dispersion, particle motion |
-| 6 | Surface Waves II | Notebook 05 | Group/phase velocity, dispersion measurement, inversion |
+| 5 | Surface Waves I | Lecture surface-waves, Notebooks 04-06 | Rayleigh/Love theory, particle motion, dispersion measurement |
+| 6 | Surface Waves II | Notebooks 05, 06 | Group/phase velocity, inversion, Love wave analysis |
 | 7 | Advanced Methods | Notebook 08 | Ambient noise, cross-correlation, Green's functions |
 | 8 | Integration | HWK1 | Comprehensive assignment applying multiple methods |
 | 9-10 | Synthesis | Student projects/presentations | ESS 512: Research paper presentations |
@@ -230,12 +259,13 @@ The `lectures/` directory contains focused teaching materials designed for effic
 - **01**: None (foundational - start here)
 - **02**: 01 recommended (for data handling context)
 - **03**: 01 (Fourier analysis), 02 (wave propagation theory)
-- **04**: 01 (spectral analysis critical)
+- **04**: 01 (spectral analysis critical), surface-waves lecture (theory)
 - **05**: 01, 04 (builds on dispersion theory)
-- **06**: 01, 02, 03 (ray theory after wave fundamentals)
-- **07**: 01, 06 (uses ray tracing and TauP)
+- **06 (Ray Tracing)**: 01, 02, 03 (ray theory after wave fundamentals)
+- **06 (Love Waves)**: 01, 04, surface-waves lecture (SH-guided waves)
+- **07**: 01, 06 Ray Tracing (uses ray tracing and TauP)
 - **08**: 01, 05 (cross-correlation builds on filtering/dispersion)
-- **HWK1**: 01, 06, 07 (integrative assignment)
+- **HWK1**: 01, 06 Ray Tracing, 07 (integrative assignment)
 
 ## ESS 412 vs ESS 512 Differentiation
 
