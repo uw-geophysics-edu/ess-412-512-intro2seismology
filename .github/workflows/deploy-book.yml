@@ -30,9 +30,48 @@ jobs:
       - name: Build book
         run: jupyter-book build .
       
+      - name: Verify build output
+        run: |
+          if [ ! -d "_build/html" ]; then
+            echo "Error: _build/html directory not found"
+            echo "Build contents:"
+            ls -la _build/ || echo "No _build directory"
+            exit 1
+          fi
+          echo "Build successful, _build/html exists"
+          ls -la _build/html/
+      
       - uses: actions/upload-pages-artifact@v4
         with:
           path: ./_build/html
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+      
+#       - uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+      
+#       - name: Install Jupyter Book
+#         run: pip install jupyter-book
+      
+#       - name: Build book
+#         run: jupyter-book build .
+
+#         # - name: Archive artifact
+#         # if: success()
+#         # run: |
+#         #     if [ -d "_build/html" ]; then
+#         #     tar -czf book-html.tar.gz -C _build/html .
+#         #     else
+#         #     echo "_build/html directory not found"
+#         #     exit 1
+#         #     fi
+      
+#       - uses: actions/upload-pages-artifact@v4
+#         with:
+#           path: ./_build/html
 
   deploy:
     needs: build
