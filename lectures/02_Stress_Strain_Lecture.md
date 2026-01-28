@@ -43,7 +43,7 @@ $$
 Key properties:
 - Traction is a **vector quantity**
 - Traction **depends on surface orientation**
-- For the opposite face, $\(\mathbf{t}(-\hat{\mathbf{n}}) = -\mathbf{t}(\hat{\mathbf{n}})\)$
+- For the opposite face, $\mathbf{t}(-\hat{\mathbf{n}}) = -\mathbf{t}(\hat{\mathbf{n}})$
 
 This orientation dependence is fundamental: the same material point experiences **different tractions on differently oriented planes**.
 
@@ -73,7 +73,7 @@ By convention in seismology:
 
 ### 2.3 Stress Tensor as a Linear Mapping
 
-Experiments and force balance arguments (Cauchy’s theorem) show that the traction vector varies **linearly** with the surface normal. This motivates the definition of the **Cauchy stress tensor** \(\boldsymbol{\sigma}\):
+Experiments and force balance arguments (Cauchy's theorem) show that the traction vector varies **linearly** with the surface normal. This motivates the definition of the **Cauchy stress tensor** $\boldsymbol{\sigma}$:
 
 $$
 \boxed{
@@ -128,7 +128,7 @@ $$
 t_N = \mathbf{t} \cdot \hat{\mathbf{n}}, \quad
 t_S = \mathbf{t} \cdot \hat{\mathbf{f}}
 $$
-where \(\hat{\mathbf{f}}\) is a unit vector parallel to the fault.
+where $\hat{\mathbf{f}}$ is a unit vector parallel to the fault.
 
 This geometric procedure—**stress → traction → normal/shear decomposition**—is central to fault mechanics, Coulomb stress, and earthquake triggering.
 
@@ -140,7 +140,7 @@ Stress describes internal forces. **Strain describes internal deformation.** The
 
 ### 3.1 Displacement vs. Strain
 
-The **displacement field** \(\mathbf{u}(\mathbf{x})\) describes how points move:
+The **displacement field** $\mathbf{u}(\mathbf{x})$ describes how points move:
 $$
 \mathbf{u} = (u_x, u_y, u_z)
 $$
@@ -173,7 +173,7 @@ $$
 ---
 
 ### 3.3 Physical Interpretation of Strain Components
-- $$\(\epsilon_{xy}\)$$: shear strain (change in right angles)
+- $\epsilon_{xy}$: shear strain (change in right angles)
 
 Important geometric insight:
 > Even “pure extension” produces shear strain when viewed in a rotated coordinate system.

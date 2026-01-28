@@ -2,11 +2,21 @@ name: ess412
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
-  - jupyter
-  - matplotlib
-  - numpy
-  - pandas
-  - scipy
+  - python=3.11
+  - jupyter=1.0
+  - jupyterlab=4.0
+  - matplotlib=3.8
+  - numpy=1.26
+  - pandas=2.1
+  - scipy=1.11
+  - pip=24.0
+  - obspy=1.4.1
+  - cartopy=0.22
+  - ipywidgets=8.1
+  - seaborn=0.13
+  - plotly=5.18
+  - jupyter-book=2.0.1
+  - codespell=2.2
   - pip
-  - obspy
+  - pip:
+    - "python-dotenv"

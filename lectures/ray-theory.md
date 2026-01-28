@@ -49,15 +49,15 @@ Plane wave incident on a horizontal interface. The ray angle θ is measured from
 ## 2. Derivation of Snell’s law (seismological form)
 
 Let:
-- $v $ be seismic velocity
-- $ u = 1/v $ be slowness
-- $ \theta $ be the ray angle measured from **vertical**
+- $v$ be seismic velocity
+- $u = 1/v$ be slowness
+- $\theta$ be the ray angle measured from **vertical**
 
 From geometry of successive wavefronts:
 
 $$p \equiv \frac{\sin\theta}{v} = u \sin\theta$$
 
-This quantity $ p $ is called the **ray parameter**.
+This quantity $p$ is called the **ray parameter**.
 
 Across a horizontal interface:
 
@@ -70,7 +70,7 @@ This is **Snell’s law**, written in seismological form.
 ---
 
 ### Physical interpretation (critical)
-The ray parameter $ p $:
+The ray parameter $p$:
 
 - Is the **horizontal slowness** of the wave
 - Equals the **slope of the travel-time curve**:

@@ -1,5 +1,6 @@
 format: jb-book
 root: README
+
 parts:
   - caption: Module 1 - Data Foundations
     chapters:
@@ -21,10 +22,10 @@ parts:
         title: "Lab 3: Body Wave Polarization"
       - file: lectures/ray-theory
         title: "Lecture: Ray Theory"
-      - file: notebooks/06_RayTracing_BodyWaves
-        title: "Lab 6: Ray Tracing"
+      - file: notebooks/06_RayTracing_Global
+        title: "Lab 6: Ray Tracing & Global Phases"
       - file: notebooks/07_Global_Phases
-        title: "Lab 7: Global Phases"
+        title: "Lab 7: Global Phase Analysis"
 
   - caption: Module 4 - Surface Waves
     chapters:

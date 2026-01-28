@@ -44,4 +44,3 @@ sphinx:
       - "**/site-packages/**"
       - "_build/**"
       - "**/.ipynb_checkpoints/**"
-
