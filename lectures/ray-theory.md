@@ -168,7 +168,7 @@ Travel-time curve T(X) and ray parameter. The slope of the tangent line at any p
 
 * **Q2.**  If velocity were constant with depth, would rays ever return to the surface? Why or why not?
 
-* **Q3.**   Why does conservation of $ p $ fail in laterally varying velocity models?
+* **Q3.**   Why is $ p $ no longer constant in laterally varying velocity models?
 
 Students should answer these *before* seeing numerical ray tracing.
 
