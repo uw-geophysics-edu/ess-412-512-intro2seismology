@@ -1,4 +1,4 @@
-[project]
+[workspace]
 name = "ess-412-512-intro2seismology"
 version = "0.1.0"
 description = "Introduction to Seismology - Computing labs supplementing Shearer's textbook"
@@ -21,6 +21,12 @@ seaborn = ">=0.11"
 plotly = ">=5.0"
 jupyter-book = ">=1.0,<2"
 codespell = "*"
+ipykernel = ">=6.0"
+h5py = ">=3.0"
+
+
+[pypi-dependencies]
+pykonal = ">=0.4.1"
 
 [feature.graduate]
 dependencies = {scikit-learn = ">=1.0", h5py = ">=3.0", netcdf4 = ">=1.5"}
