@@ -443,7 +443,7 @@ $$
 
 ### Critical assumption (circle this)
 
-**Rays are frozen in the reference model**
+Rays are frozen in the reference model
 $$
 \Gamma \approx \Gamma_0
 $$
@@ -460,8 +460,6 @@ $$
 ---
 
 ## 3. Discretization: From Integrals to Sums (8 min)
-
-
 Draw:
 
 $$
@@ -505,21 +503,25 @@ with:
 
 > What happens to (G) in a cell that no ray crosses?
 ---
+
+## 4. Why Tomography Is Hard (Ill-posedness) (6–8 min)
+
+Goal is to minimize the difference between observed and predicted data:
 $$
 \min_{\mathbf{m}} \|\mathbf{Gm} - \mathbf{d}\|_2^2
 $$
-## 4. Why Tomography Is Hard (Ill-posedness) (6–8 min)
-
+$G$ is not square and full rank, so we calculate the *normal equation*:
+$$
+\mathbf{G}\mathbf{m} = \mathbf{d}
+$$
 
 $$
 (\mathbf{G}^T\mathbf{G})\mathbf{m} = \mathbf{G}^T\mathbf{d}
-
-\min_{\mathbf{m}} |\mathbf{Gm} - \mathbf{d}|_2^2
 $$
 
 Then the normal equations:
 $$
-(\mathbf{G}^T\mathbf{G})\mathbf{m} = \mathbf{G}^T\mathbf{d}
+\mathbf{m} = (\mathbf{G}^T\mathbf{G})^{-1}\mathbf{G}^T\mathbf{d}
 $$
 
 ### Discuss three failure modes
@@ -557,16 +559,7 @@ $$
 +
 \lambda^2 |\mathbf{m}|^2
 $$
-Say:
-
-
-* favors **small-amplitude anomalies**
-$$
-\min_{\mathbf{m}}
-\|\mathbf{Gm}-\mathbf{d}\|^2
-+
-\lambda^2 \|\mathbf{L}\mathbf{m}\|^2
-$$
+Say: Damping favors **small-amplitude anomalies**
 
 ### Smoothness (minimum-roughness)
 
@@ -584,16 +577,9 @@ where $ \mathbf{L} $ is a discrete Laplacian.
 * favors **smooth Earth**
 * fills gaps with **interpolation**
 
-### Ask students
-
-> In sedimentary basins?
 
 ---
-$$
-\delta t_P = \int \delta u_P\, ds
-\quad\text{and}\quad
-\delta t_S = \int \delta u_S\, ds
-$$
+
 ## 6. P vs S Tomography (2–3 min)
 
 ### On the board
