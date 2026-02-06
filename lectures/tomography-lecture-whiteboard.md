@@ -385,18 +385,17 @@ t^0_i
 $$
 * a layered or heterogeneous medium
 
-[
 $$
 d_i \equiv \delta t_i = t^{\text{obs}}_i - t^0_i
 $$
 \quad\text{and}\quad
 t^0_i
-]
+
 
 Define the **data**:
-[
+$$
 d_i \equiv \delta t_i = t^{\text{obs}}_i - t^0_i
-]
+$$
 
 ### Say explicitly
 
@@ -405,7 +404,7 @@ d_i \equiv \delta t_i = t^{\text{obs}}_i - t^0_i
 
 ### Physical meaning
 
-* ( \delta t > 0 ): slower than reference
+* ( $\delta t > 0$ ): slower than reference
 
 ### Concept check (ask students)
 
@@ -422,34 +421,32 @@ u(\mathbf{x}) = \frac{1}{v(\mathbf{x})}
 $$
 ### On the board
 
-[
+
 $$
 u(\mathbf{x}) = u_0(\mathbf{x}) + \delta u(\mathbf{x})
-$$
 \quad\text{with}\quad
 u(\mathbf{x}) = \frac{1}{v(\mathbf{x})}
+$$
 
 Split the model:
 $$
 \delta t
 = \int_{\Gamma} \delta u(\mathbf{x})\, ds
-$$
 u(\mathbf{x}) = u_0(\mathbf{x}) + \delta u(\mathbf{x})
-]
+$$
 
-Linearize:
-\delta t
+Linearize $\delta t$:
 $$
-\Gamma \approx \Gamma_0
+ \Gamma \approx \Gamma_0
 $$
-]
+
 
 ### Critical assumption (circle this)
 
 **Rays are frozen in the reference model**
-[
+$$
 \Gamma \approx \Gamma_0
-]
+$$
 
 ### Say out loud
 
@@ -475,29 +472,29 @@ $$
 * one ray crossing several cells
 
 Write:
-[
+$$
 \delta t_i
 \approx
 \sum_{j=1}^{M} L_{ij},\delta u_j
-]
+$$
 Where:
 $$
 \mathbf{d} = \mathbf{G}\mathbf{m}
 $$
-* ( \delta u_j ): slowness perturbation in cell (j)
-* ( L_{ij} ): path length of ray (i) in cell (j)
+* $ \delta u_j $: slowness perturbation in cell (j)
+* $ L_{ij} $: path length of ray (i) in cell (j)
 
 ### Matrix form (box this)
 
-[
+$$
 \mathbf{d} = \mathbf{G}\mathbf{m}
-]
+$$
 
 with:
 
-* ( d_i = \delta t_i )
-* ( m_j = \delta u_j )
-* ( G_{ij} = L_{ij} )
+*  $ d_i = \delta t_i $
+*  $ m_j = \delta u_j $
+*  $ G_{ij} = L_{ij} $
 
 ### Emphasize
 
@@ -516,15 +513,14 @@ $$
 
 $$
 (\mathbf{G}^T\mathbf{G})\mathbf{m} = \mathbf{G}^T\mathbf{d}
-$$
-[
+
 \min_{\mathbf{m}} |\mathbf{Gm} - \mathbf{d}|_2^2
-]
+$$
 
 Then the normal equations:
-[
+$$
 (\mathbf{G}^T\mathbf{G})\mathbf{m} = \mathbf{G}^T\mathbf{d}
-]
+$$
 
 ### Discuss three failure modes
 
@@ -555,12 +551,12 @@ $$
 ### Damping (minimum-norm)
 
 Write:
-[
+$$
 \min_{\mathbf{m}}
 |\mathbf{Gm}-\mathbf{d}|^2
 +
 \lambda^2 |\mathbf{m}|^2
-]
+$$
 Say:
 
 
@@ -575,14 +571,14 @@ $$
 ### Smoothness (minimum-roughness)
 
 Write:
-[
+$$
 \min_{\mathbf{m}}
 |\mathbf{Gm}-\mathbf{d}|^2
 +
 \lambda^2 |\mathbf{L}\mathbf{m}|^2
-]
+$$
 
-where ( \mathbf{L} ) is a discrete Laplacian.
+where $ \mathbf{L} $ is a discrete Laplacian.
 
 
 * favors **smooth Earth**
@@ -603,11 +599,11 @@ $$
 ### On the board
 
 Write:
-[
+$$
 \delta t_P = \int \delta u_P, ds
 \quad\text{and}\quad
 \delta t_S = \int \delta u_S, ds
-]
+$$
 
 ### Emphasize
 
@@ -634,9 +630,9 @@ Draw:
 * bent ray avoiding slow region
 
 Write:
-[
+$$
 t(u) = \int_{\Gamma(u)} u(\mathbf{x}), ds
-
+$$
 Say clearly:
 
 $$
@@ -644,30 +640,30 @@ $$
 \approx
 \int_{\Gamma^{(k)}} \delta u^{(k)}\, ds
 $$
-* **and** (\Gamma) depends on (u)
+* **and** $\Gamma$ depends on $u$
 
 ### Linearization with iteration
 
 At iteration (k):
-[
+$$
 \delta t^{(k)}
 \approx
 \int_{\Gamma^{(k)}} \delta u^{(k)}, ds
-]
+$$
 
 
 $$
 	ext{model} \rightarrow \text{rays} \rightarrow G \rightarrow \text{update}
 $$
-2. Trace rays (\Gamma^{(0)})
-4. Solve for (\delta u^{(0)})
-5. Update (u^{(1)} = u^{(0)} + \alpha \delta u^{(0)})
+2. Trace rays $\Gamma^{(0)}$
+4. Solve for $\delta u^{(0)}$
+5. Update $u^{(1)} = u^{(0)} + \alpha \delta u^{(0)}$
 6. Repeat
 
 Circle:
-[
+$$
 \text{model} \rightarrow \text{rays} \rightarrow G \rightarrow \text{update}
-]
+$$
 
 ---
 
@@ -679,7 +675,7 @@ Circle:
 * PyKonal solves:
 
   * eikonal equation
-  * ray tracing via (\nabla T)
+  * ray tracing via $\nabla T$
 
 ### Prediction question
 
@@ -705,11 +701,3 @@ Circle:
   * station terms
 * Finite-frequency sensitivity kernels
 * Comparison with surface-wave tomography
-
----
-
-If you want next, I can:
-
-* convert this into **ADA-compliant slides** with figures + alt-text
-* add **marginal instructor notes** (what to emphasize live vs skip)
-* write a **one-page student summary** that complements the notebook without duplicating it
