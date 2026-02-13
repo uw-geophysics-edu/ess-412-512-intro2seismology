@@ -48,10 +48,19 @@ serve-book = "jupyter book serve ."
 build-all = "BASE_URL=/ess-412-512-intro2seismology jupyter book build . && mv _build/html website/book && mkdir -p website/book/img && cp -R lectures/scripts/figures/. website/book/img/ 2>/dev/null || true"
 build-ci = "jupyter book build . && mv _build/html website/book && mkdir -p website/book/img && cp -R lectures/scripts/figures/. website/book/img/ 2>/dev/null || true"
 serve-all = "python -m http.server --directory website/ 3000"
-#linkcheck = "jupyter book build --check-links ."
-linkcheck = "jupyter book build ."
-spellcheck = "codespell --skip ./_build,./website,pixi.lock"
 clean = "rm -rf _build website/book"
+
+# Validation tasks
+validate-toc = "python scripts/validate_toc.py"
+validate-badges = "python scripts/check_colab_badges.py"
+validate = { cmd = "python scripts/validate_toc.py && python scripts/check_colab_badges.py", depends-on = ["validate-toc", "validate-badges"] }
+
+# Quality checks
+linkcheck = "jupyter book build . --builder linkcheck"
+spellcheck = "codespell --skip ./_build,./website,pixi.lock"
+
+# Pre-commit workflow (run before committing changes)
+precommit = { cmd = "python scripts/validate_toc.py && python scripts/check_colab_badges.py && jupyter book build .", depends-on = ["validate"] }
 
 [tasks.install-dev]
 cmd = "echo 'Dev dependencies installed'"

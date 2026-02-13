@@ -1,0 +1,78 @@
+# Pre-commit hooks for ESS 412/512 Intro to Seismology
+# See https://pre-commit.com for more information
+
+# To install pre-commit hooks (one-time setup):
+#   pip install pre-commit
+#   pre-commit install
+#
+# To run manually:
+#   pre-commit run --all-files
+#
+# To skip hooks temporarily (not recommended):
+#   git commit --no-verify
+
+repos:
+  # General file checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: '\.ipynb$'
+      - id: end-of-file-fixer
+        exclude: '\.ipynb$'
+      - id: check-yaml
+        args: ['--allow-multiple-documents']
+      - id: check-json
+        files: '\.ipynb$'
+      - id: check-added-large-files
+        args: ['--maxkb=5000']  # Limit files to 5MB
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+
+  # Spell checking (markdown and Python)
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args: ['--skip', './_build,./website,pixi.lock,*.ipynb']
+        exclude: '\.ipynb$'
+
+  # Validate _toc.yml file references
+  - repo: local
+    hooks:
+      - id: validate-toc
+        name: Validate _toc.yml file references
+        entry: python scripts/validate_toc.py
+        language: system
+        pass_filenames: false
+        files: '_toc\.yml$|^notebooks/.*\.ipynb$|^lectures/.*\.md$'
+
+  # Check Colab badges in notebooks
+  - repo: local
+    hooks:
+      - id: check-colab-badges
+        name: Check Colab badges in notebooks
+        entry: python scripts/check_colab_badges.py
+        language: system
+        pass_filenames: false
+        files: '^notebooks/.*\.ipynb$'
+
+  # Validate notebook structure
+  - repo: local
+    hooks:
+      - id: validate-notebooks
+        name: Validate notebook JSON structure
+        entry: python -c "import json, sys; [json.load(open(f)) for f in sys.argv[1:]]"
+        language: system
+        files: '\.ipynb$'
+        exclude: '\.ipynb_checkpoints/'
+
+# Note: To enable Jupyter Book build validation in pre-commit (slow), uncomment:
+# - repo: local
+#   hooks:
+#     - id: jupyter-book-build
+#       name: Build Jupyter Book  
+#       entry: jupyter book build .
+#       language: system
+#       pass_filenames: false
+#       files: '_toc\.yml$|_config\.yml$|\.ipynb$|\.md$'

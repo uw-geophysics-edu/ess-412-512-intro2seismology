@@ -60,3 +60,12 @@ data/
 # Backup files
 *_backup.ipynb
 *.bak
+*.backup
+**/*.backup
+*~
+
+# Jupyter Book deployment artifacts
+website/
+
+# Archive directory (old assignments)
+archive/

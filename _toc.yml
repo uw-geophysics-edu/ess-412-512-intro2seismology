@@ -4,48 +4,61 @@ root: README
 parts:
   - caption: Module 1 - Data Foundations
     chapters:
-      - file: notebooks/01_Data_FourierTransform
+      - file: notebooks/01_Data_Fourier_Practice
         title: "Lab 1: Data & Fourier Analysis"
 
   - caption: Module 2 - Stress & Strain
     chapters:
       - file: lectures/02_Stress_Strain_Lecture
         title: "Lecture: Stress & Strain Fundamentals"
-      - file: notebooks/02_Stress_and_Strain
-        title: "Lab 2: Stress and Strain"
-      - file: notebooks/02_Stress_Strain_Test
-        title: "In-Class Exercise"
+      - file: notebooks/02_Stress_Strain_Practice
+        title: "Lab 2: Stress & Strain"
 
   - caption: Module 3 - Body Waves
     chapters:
-      - file: notebooks/03_chapter3_wrapup
-        title: "Lab 3: Body Wave Polarization"
       - file: lectures/ray-theory
         title: "Lecture: Ray Theory"
-      - file: notebooks/06_RayTracing_Global
-        title: "Lab 6: Ray Tracing & Global Phases"
-      - file: notebooks/07_Global_Phases
-        title: "Lab 7: Global Phase Analysis"
+      - file: notebooks/03a_Body_Waves_Theory
+        title: "Lab 3a: Body Wave Polarization"
+      - file: notebooks/03b_Ray_Tracing_Cartesian_Practice
+        title: "Lab 3b: 2D Ray Tracing (Cartesian)"
+      - file: notebooks/03c_Ray_Tracing_Global_Practice
+        title: "Lab 3c: Ray Tracing (Global)"
+      - file: notebooks/03d_Global_Phases_Practice
+        title: "Lab 3d: Global Phase Observations"
 
-  - caption: Module 4 - Surface Waves
+  - caption: Module 4 - Reflection Seismology
+    chapters:
+      - file: notebooks/04a_Reflection_Coefficients_Theory
+        title: "Lab 4a: Reflection & Transmission"
+      - file: notebooks/04b_Reflection_CMP_Practice
+        title: "Lab 4b: CMP, NMO & Migration"
+
+  - caption: Module 5 - Surface Waves
     chapters:
       - file: lectures/surface-waves
-        title: "Lecture: Surface Waves - Rayleigh & Love"
-      - file: notebooks/04_RayleighWaves_Theory
-        title: "Lab 4: Rayleigh Waves"
-      - file: notebooks/05_SurfaceWaves_Practicum
-        title: "Lab 5: Dispersion Analysis"
-      - file: notebooks/06_Love_waves
-        title: "Lab 6: Love Waves"
+        title: "Lecture: Rayleigh & Love Waves"
+      - file: notebooks/05a_Rayleigh_Waves_Theory
+        title: "Lab 5a: Rayleigh Wave Theory"
+      - file: notebooks/05b_Love_Waves_Theory
+        title: "Lab 5b: Love Wave Theory"
+      - file: notebooks/05c_Surface_Waves_Practice
+        title: "Lab 5c: Dispersion Analysis"
+      - file: notebooks/05d_Noise_CrossCorrelation_Practice
+        title: "Lab 5d: Ambient Noise Cross-Correlation"
 
-  - caption: Module 5 - Advanced Methods
+  - caption: Optional - Advanced Topics
     chapters:
-      - file: notebooks/08_Noise_CrossCorrelation
-        title: "Lab 8: Ambient Noise"
+      - file: lectures/tomography-lecture-whiteboard
+        title: "Lecture: Travel-Time Tomography"
+      - file: notebooks/travel_time_tomography_iterative_pykonal
+        title: "Advanced: Iterative Tomography"
+      - file: notebooks/toy_surface_wave_inversion
+        title: "Advanced: Surface Wave Inversion"
 
   - caption: Assignments
     chapters:
       - file: lectures/Graduate_Paper_Presentation
         title: "Graduate Guidelines - ESS 512"
-      - file: notebooks/HWK1_ComputerProgram1_Assignment
-        title: "Homework 1"
+      - file: notebooks/Midterm_Integrated_Assignment
+        title: "Midterm: Integrated Assignment"

@@ -30,12 +30,17 @@ jobs:
           cache: true
           frozen: true
       
-      - name: Build book
-        run: pixi run build-ci
+      - name: Validate TOC file references
+        run: pixi run validate-toc
+      
+      - name: Check Colab badges in notebooks
+        run: pixi run validate-badges
       
       - name: Spellcheck
-        continue-on-error: true
         run: pixi run spellcheck
+      
+      - name: Build book
+        run: pixi run build-ci
       
       - name: Linkcheck
         continue-on-error: true

@@ -1,6 +1,7 @@
 # ESS 412/512: Introduction to Seismology
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Deploy Jupyter Book](https://github.com/UW-geophysics-edu/ess-412-512-intro2seismology/actions/workflows/deploy-book.yml/badge.svg)](https://github.com/UW-geophysics-edu/ess-412-512-intro2seismology/actions/workflows/deploy-book.yml)
 
 Computational labs and exercises for upper-level undergraduate (ESS 412) and junior graduate (ESS 512) seismology course. Course materials supplement Peter Shearer's **"Introduction to Seismology"** textbook with hands-on Python exercises using real seismic data.
 
@@ -31,26 +32,35 @@ By the end of this course, students will be able to:
 
 ```
 ess-412-512-intro2seismology/
-├── notebooks/                                    # Computational exercises (numbered in order)
-│   ├── 01_Data_FourierTransform.ipynb           # Data handling, Fourier analysis, filtering
-│   ├── 02_Stress_and_Strain.ipynb              # Elastic constants, stress/strain relationships
-│   ├── 02_Stress_Strain_Test.ipynb             # 50-min in-class exercise (stress/strain)
-│   ├── 03_chapter3_wrapup.ipynb                # Body waves analysis and polarization
-│   ├── 04_RayleighWaves_Theory.ipynb           # Rayleigh wave theory and derivations
-│   ├── 05_SurfaceWaves_Practicum.ipynb         # Surface wave dispersion measurement
-│   ├── 06_RayTracing_BodyWaves.ipynb           # Ray theory, travel times, Snell's law
-│   ├── 06_Love_waves.ipynb                     # Love wave theory and analysis
-│   ├── 07_Global_Phases.ipynb                  # Body wave phase identification
-│   ├── 08_Noise_CrossCorrelation.ipynb         # Ambient noise interferometry
-│   └── HWK1_ComputerProgram1_Assignment.ipynb  # Formal graded assignment
+├── notebooks/                                    # Computational exercises (systematic naming)
+│   ├── 01_Data_Fourier_Practice.ipynb          # Data handling, Fourier analysis, filtering
+│   ├── 02_Stress_Strain_Practice.ipynb         # Elastic constants, stress/strain relationships
+│   ├── 03a_Body_Waves_Theory.ipynb             # Body wave polarization and analysis
+│   ├── 03b_Ray_Tracing_Cartesian_Practice.ipynb # 2D ray tracing with PyKonal
+│   ├── 03c_Ray_Tracing_Global_Practice.ipynb   # Global ray tracing with TauP
+│   ├── 03d_Global_Phases_Practice.ipynb        # Global phase identification
+│   ├── 04a_Reflection_Coefficients_Theory.ipynb # Reflection/transmission at interfaces
+│   ├── 04b_Reflection_CMP_Practice.ipynb       # CMP, NMO, migration demo
+│   ├── 05a_Rayleigh_Waves_Theory.ipynb         # Rayleigh wave theory and derivations
+│   ├── 05b_Love_Waves_Theory.ipynb             # Love wave theory and analysis
+│   ├── 05c_Surface_Waves_Practice.ipynb        # Surface wave dispersion measurement
+│   ├── 05d_Noise_CrossCorrelation_Practice.ipynb # Ambient noise interferometry
+│   ├── Midterm_Integrated_Assignment.ipynb     # Comprehensive midterm assignment
+│   ├── travel_time_tomography_iterative_pykonal.ipynb # Advanced: Iterative tomography
+│   └── toy_surface_wave_inversion.ipynb        # Advanced: Surface wave inversion
 ├── solutions/                                    # Instructor-only solutions (gitignored)
 │   └── 02_Stress_Strain_Solutions.ipynb        # Example solution with rubric
 ├── lectures/                                     # Lecture notes and teaching materials
 │   ├── 02_Stress_Strain_Lecture.md             # Stress/strain lecture notes
+│   ├── ray-theory.md                           # Ray theory fundamentals
 │   ├── surface-waves.md                        # Surface wave theory (Rayleigh & Love)
+│   ├── tomography-lecture-whiteboard.md        # Travel-time tomography notes
 │   └── Graduate_Paper_Presentation.md          # ESS 512: Paper presentation guidelines
+├── scripts/                                      # Utility scripts for book maintenance
+│   ├── add_colab_badges.py                     # Add Google Colab badges to notebooks
+│   └── validate_toc.py                         # Validate _toc.yml file references
 ├── environment.yml                               # Conda environment specification
-├── pixi.toml                                     # Pixi configuration (alternative)
+├── pixi.toml                                     # Pixi configuration (preferred)
 ├── INSTALL.md                                    # Detailed setup instructions
 ├── LICENSE                                       # MIT License
 └── README.md                                     # This file
@@ -92,10 +102,16 @@ pixi install
 - All lectures, labs, and assignments in one place
 
 **Local Setup** (For development or offline work):
-1. Start with [01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb) to learn data handling and signal processing
-2. Follow notebooks in numerical order (01 → 08, plus HWK1)
+1. Start with [01_Data_Fourier_Practice.ipynb](notebooks/01_Data_Fourier_Practice.ipynb) to learn data handling and signal processing
+2. Follow notebooks by module (see Course Content below)
 3. Each notebook includes theory, demonstrations, and exercises
 4. ESS 512 students should complete additional graduate-level exercises marked in each notebook
+
+**Google Colab** (No installation required):
+- Each notebook includes a "Open in Colab" badge at the top
+- Click the badge to launch the notebook directly in Google Colab
+- First cell installs required dependencies automatically
+- Perfect for students without local Python setup
 
 ## Course Content by Theme
 
@@ -104,101 +120,148 @@ The course is organized around core seismological concepts, with notebooks progr
 ### Module 1: Data Foundations and Signal Processing
 **Learning Goal**: Master seismic data acquisition and spectral analysis techniques
 
-- **[01_Data_FourierTransform.ipynb](notebooks/01_Data_FourierTransform.ipynb)** (Week 1)
+- **[01_Data_Fourier_Practice.ipynb](notebooks/01_Data_Fourier_Practice.ipynb)** (Week 1, ~3 hrs)
   - Shearer Chapter 3
-  - Downloading seismic data from IRIS/FDSN
-  - Instrument response removal
-  - Fourier analysis and filtering
-  - Spectral analysis of earthquakes
+  - Downloading seismic data from IRIS/FDSN using ObsPy
+  - Instrument response removal and calibration
+  - Fourier analysis and filtering techniques
+  - Spectral analysis of earthquake signals
 
 ### Module 2: Stress, Strain, and Elasticity
 **Learning Goal**: Connect elastic wave theory to material deformation
 
 - **Lecture**: [02_Stress_Strain_Lecture.md](lectures/02_Stress_Strain_Lecture.md) (Week 2)
   - Shearer Chapter 2
-  - Stress and strain tensors
-  - Hooke's Law and elastic constants
-  - Lamé parameters and wave speeds
-  - Real-world geodetic examples (1992 Landers earthquake)
+  - Stress and strain tensors, traction boundary conditions
+  - Hooke's Law and elastic constants (Lamé parameters)
+  - P and S wave velocities from material properties
+  - Real-world geodetic examples (1992 Landers earthquake, Pinon Flat Observatory)
   
-- **[02_Stress_and_Strain.ipynb](notebooks/02_Stress_and_Strain.ipynb)** (Week 2)
+- **[02_Stress_Strain_Practice.ipynb](notebooks/02_Stress_Strain_Practice.ipynb)** (Week 2, ~3 hrs)
   - Eigenvalue analysis of stress/strain tensors
-  - Principal stress directions
+  - Principal stress directions and magnitudes
   - Computational implementation of elastic relationships
-  
-- **[02_Stress_Strain_Test.ipynb](notebooks/02_Stress_Strain_Test.ipynb)** (Week 2)
-  - 50-minute in-class assessment
-  - Tiered difficulty: Parts a-e (ESS 412), Part f (ESS 512)
-  - Hand-sketch visualization component
-  - **Solution**: [solutions/02_Stress_Strain_Solutions.ipynb](solutions/02_Stress_Strain_Solutions.ipynb)
+  - Strain accumulation from borehole strainmeter data
 
 ### Module 3: Body Waves and Ray Theory
-**Learning Goal**: Understand P and S wave propagation through Earth structure
+**Learning Goal**: Understand P and S wave propagation through Earth structure using ray theory
 
-- **[03_chapter3_wrapup.ipynb](notebooks/03_chapter3_wrapup.ipynb)** (Week 3)
+- **Lecture**: [ray-theory.md](lectures/ray-theory.md) (Week 3)
+  - Shearer Chapter 4.1-4.2
+  - Snell's law, ray parameter, and fermat's principle
+  - Ray bending in velocity gradients
+  - Travel-time curves and turning depths
+
+- **[03a_Body_Waves_Theory.ipynb](notebooks/03a_Body_Waves_Theory.ipynb)** (Week 3, ~2 hrs)
   - Shearer Chapter 3
-  - P/S wave separation using polarization
-  - Rectilinearity analysis
+  - P/S wave separation using polarization analysis
+  - Covariance matrix eigendecomposition for rectilinearity
   - Particle motion visualization in Z-R-T coordinates
-  - Divergence and curl for wave-type identification
+  - Helmholtz decomposition (divergence and curl)
   
-- **[06_RayTracing_BodyWaves.ipynb](notebooks/06_RayTracing_BodyWaves.ipynb)** (Week 3-4)
+- **[03b_Ray_Tracing_Cartesian_Practice.ipynb](notebooks/03b_Ray_Tracing_Cartesian_Practice.ipynb)** (Week 3-4, ~3 hrs)
   - Shearer Chapter 4
-  - Snell's law and ray parameters
-  - Travel time curves
-  - Ray path computation through layered media
+  - 2D ray tracing in Cartesian coordinates using PyKonal
+  - Eikonal equation solver for travel-time fields
+  - Curved layers, low-velocity zones, and ray focusing
+  - Travel-time residuals from structure vs source location errors
   
-- **[07_Global_Phases.ipynb](notebooks/07_Global_Phases.ipynb)** (Week 4)
+- **[03c_Ray_Tracing_Global_Practice.ipynb](notebooks/03c_Ray_Tracing_Global_Practice.ipynb)** (Week 4, ~2 hrs)
   - Shearer Chapters 4-5
-  - Body wave phase identification (P, S, PcP, ScS, PKP, etc.)
-  - TauP toolkit for phase predictions
-  - Real data analysis of global earthquakes
+  - Spherical Earth models (iasp91, PREM)
+  - TauP toolkit for global ray tracing
+  - Ray geometry in 2D/3D through Earth's interior
+  
+- **[03d_Global_Phases_Practice.ipynb](notebooks/03d_Global_Phases_Practice.ipynb)** (Week 4, ~3 hrs)
+  - Shearer Chapters 4-5
+  - Body wave phase identification (P, S, PcP, ScS, PKP, SKS, etc.)
+  - Travel-time predictions with TauP
+  - Real earthquake data analysis and phase picking
 
-### Module 4: Surface Waves
+### Module 4: Reflection Seismology
+**Learning Goal**: Understand wave reflection/transmission and exploration seismology methods
+
+- **[04a_Reflection_Coefficients_Theory.ipynb](notebooks/04a_Reflection_Coefficients_Theory.ipynb)** (Week 5, ~2 hrs)
+  - Shearer Chapter 5.4
+  - SH and P-SV reflection and transmission coefficients
+  - Post-critical incidence and total internal reflection
+  - Complex coefficients and attenuation
+  
+- **[04b_Reflection_CMP_Practice.ipynb](notebooks/04b_Reflection_CMP_Practice.ipynb)** (Week 5, ~1 hr)
+  - Reflection seismology basics
+  - Common midpoint (CMP) gathers
+  - Normal moveout (NMO) correction and stacking
+  - Point diffractor migration
+  - 20-minute toy demonstration
+
+### Module 5: Surface Waves
 **Learning Goal**: Analyze dispersive surface wave propagation and Earth structure
 
-- **Lecture**: [surface-waves.md](lectures/surface-waves.md) (Week 5)
+- **Lecture**: [surface-waves.md](lectures/surface-waves.md) (Week 6)
   - Shearer Chapter 7
   - Rayleigh and Love wave theory
   - Derivation of dispersion relations
-  - Particle motion characteristics
+  - Particle motion characteristics (retrograde elliptical for Rayleigh, horizontal for Love)
   - Practical workflow connecting theory to lab exercises
 
-- **[04_RayleighWaves_Theory.ipynb](notebooks/04_RayleighWaves_Theory.ipynb)** (Week 5)
+- **[05a_Rayleigh_Waves_Theory.ipynb](notebooks/05a_Rayleigh_Waves_Theory.ipynb)** (Week 6, ~2 hrs)
   - Shearer Chapter 7
-  - Rayleigh wave theory and numerical analysis
+  - Rayleigh wave boundary value problem in half-space
+  - Numerical solution of dispersion equation
   - Particle motion (retrograde elliptical)
-  - Dispersion relationships and computation
+  - Depth sensitivity kernels
   
-- **[05_SurfaceWaves_Practicum.ipynb](notebooks/05_SurfaceWaves_Practicum.ipynb)** (Week 6)
-  - Shearer Chapter 7
-  - Group velocity vs. phase velocity
-  - Dispersion measurement from real data
-  - Multiple-filter technique (MFT)
-  - Inverting dispersion for velocity structure
-
-- **[06_Love_waves.ipynb](notebooks/06_Love_waves.ipynb)** (Week 6)
+- **[05b_Love_Waves_Theory.ipynb](notebooks/05b_Love_Waves_Theory.ipynb)** (Week 6, ~2 hrs)
   - Shearer Chapter 7
   - Love wave theory: SH-guided waves in layered media
-  - Particle motion and energy distribution
+  - Layer-over-halfspace dispersion curves
+  - Eigenfunctions and particle motion
   - Comparison with Rayleigh waves
-  - Dispersion analysis of Love waves
+  
+- **[05c_Surface_Waves_Practice.ipynb](notebooks/05c_Surface_Waves_Practice.ipynb)** (Week 7, ~4 hrs)
+  - Shearer Chapter 7
+  - Group velocity vs. phase velocity measurement
+  - Dispersion curve extraction from real earthquake data
+  - Multiple-filter technique (MFT)
+  - Inverting dispersion for 1D velocity structure
+  - Comprehensive theory introduction and practical workflow
 
-### Module 5: Advanced Methods
-**Learning Goal**: Apply modern seismological techniques to ambient noise
+- **[05d_Noise_CrossCorrelation_Practice.ipynb](notebooks/05d_Noise_CrossCorrelation_Practice.ipynb)** (Week 7, ~3 hrs)
+  - Shearer Chapter 9, Lawrence & Denolle (2013)
+  - Ambient noise seismology fundamentals
+  - Noise cross-correlation for Green's function extraction
+  - Virtual source concept and reciprocity
+  - Surface wave extraction from ambient noise
 
-- **[08_Noise_CrossCorrelation.ipynb](notebooks/08_Noise_CrossCorrelation.ipynb)** (Week 7)
-  - Shearer Chapter 9
-  - Ambient noise seismology
-  - Cross-correlation and Green's function extraction
-  - Virtual source concept
-  - Surface wave extraction from noise
+### Optional - Advanced Topics
+**For interested students or advanced graduate work**
+
+- **Lecture**: [tomography-lecture-whiteboard.md](lectures/tomography-lecture-whiteboard.md)
+  - Ray-based inverse problems and regularization
+  - Travel-time tomography theory
+  - Resolution matrices and checkerboard tests
+  - Damping vs smoothness regularization
+
+- **[travel_time_tomography_iterative_pykonal.ipynb](notebooks/travel_time_tomography_iterative_pykonal.ipynb)** (~5 hrs)
+  - Travel-time tomography: straight rays → iterative bent rays
+  - PyKonal eikonal solver for curved rays
+  - Resolution tests (checkerboard patterns)
+  - Regularization parameter selection
+  
+- **[toy_surface_wave_inversion.ipynb](notebooks/toy_surface_wave_inversion.ipynb)** (~4 hrs)
+  - End-to-end surface wave inversion workflow
+  - F-K spectrum analysis → dispersion curve measurement
+  - Love wave forward solver for 1D shear velocity structure
+  - Synthetic tests and real data application
 
 ### Assessment
-- **[HWK1_ComputerProgram1_Assignment.ipynb](notebooks/HWK1_ComputerProgram1_Assignment.ipynb)**
-  - Formal graded assignment
-  - Integrates concepts from multiple modules
-  - Independent data analysis and interpretation
+- **[Midterm_Integrated_Assignment.ipynb](notebooks/Midterm_Integrated_Assignment.ipynb)** (Week 5, ~8-10 hrs)
+  - Comprehensive midterm examination
+  - Part 1: Ray theory and travel-time curves
+  - Part 2: Surface wave dispersion from real data
+  - Part 3: Travel-time tomography (straight and curved rays with PyKonal)
+  - Integrates observation → theory → inverse problem workflow
+  - Resolution analysis and quality metrics
 
 ## Lecture Notes and Teaching Materials
 
@@ -244,28 +307,25 @@ The `lectures/` directory contains focused teaching materials designed for effic
 
 | Week | Theme | Materials | Topics |
 |------|-------|-----------|--------|
-| 1 | Data Foundations | Notebook 01 | FDSN data access, instrument response, Fourier analysis, filtering |
-| 2 | Stress & Strain | Lecture 02, Notebooks 02, Test 02 | Elastic constants, stress/strain tensors, Hooke's Law, eigenvalue analysis |
-| 3 | Body Waves I | Notebook 03 | P/S separation, polarization, rectilinearity, particle motion |
-| 4 | Body Waves II | Notebooks 06-07 | Ray tracing, travel times, global phases, TauP toolkit |
-| 5 | Surface Waves I | Lecture surface-waves, Notebooks 04-06 | Rayleigh/Love theory, particle motion, dispersion measurement |
-| 6 | Surface Waves II | Notebooks 05, 06 | Group/phase velocity, inversion, Love wave analysis |
-| 7 | Advanced Methods | Notebook 08 | Ambient noise, cross-correlation, Green's functions |
-| 8 | Integration | HWK1 | Comprehensive assignment applying multiple methods |
-| 9-10 | Synthesis | Student projects/presentations | ESS 512: Research paper presentations |
+| 1 | Data Foundations | 01 | FDSN data access, ObsPy, instrument response, Fourier analysis, filtering |
+| 2 | Stress & Strain | Lecture 02, 02 Practice | Elastic constants, stress/strain tensors, Hooke's Law, eigenvalue analysis |
+| 3 | Body Waves I | Lecture Ray Theory, 03a, 03b | P/S polarization, rectilinearity, 2D ray tracing with PyKonal |
+| 4 | Body Waves II | 03c, 03d | TauP toolkit, spherical Earth models, global phase identification |
+| 5 | Reflection & Midterm | 04a, 04b, Midterm | Reflection coefficients, CMP/NMO, begin integrated assignment |
+| 6 | Surface Waves I | Lecture Surface Waves, 05a, 05b | Rayleigh/Love theory, dispersion curves, eigenfunctions |
+| 7 | Surface Waves II | 05c, 05d | Dispersion measurement, MFT, ambient noise cross-correlation |
+| 8 | Advanced Topics | Optional notebooks | Tomography, surface wave inversion (as time permits) |
+| 9-10 | Synthesis | Presentations | ESS 512: Research paper presentations |
 
 ### Prerequisites by Notebook
 
-- **01**: None (foundational - start here)
-- **02**: 01 recommended (for data handling context)
-- **03**: 01 (Fourier analysis), 02 (wave propagation theory)
-- **04**: 01 (spectral analysis critical), surface-waves lecture (theory)
-- **05**: 01, 04 (builds on dispersion theory)
-- **06 (Ray Tracing)**: 01, 02, 03 (ray theory after wave fundamentals)
-- **06 (Love Waves)**: 01, 04, surface-waves lecture (SH-guided waves)
-- **07**: 01, 06 Ray Tracing (uses ray tracing and TauP)
-- **08**: 01, 05 (cross-correlation builds on filtering/dispersion)
-- **HWK1**: 01, 06 Ray Tracing, 07 (integrative assignment)
+- **01 Data**: None (foundational - start here)
+- **02 Stress/Strain**: 01 recommended (for data handling context)
+- **03a-d Body Waves**: 01 (Fourier analysis), 02 (wave propagation theory)
+- **04a-b Reflection**: 03 (ray theory for reflection angles)
+- **05a-d Surface Waves**: 01 (spectral analysis), surface-waves lecture (theory)
+- **Midterm**: 01, 03b-d (ray tracing), 05c (dispersion fundamentals)
+- **Advanced**: All core modules completed
 
 ## ESS 412 vs ESS 512 Differentiation
 
