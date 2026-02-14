@@ -5,9 +5,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-env:
-  BASE_URL: /ess-412-512-intro2seismology
-
 permissions:
   contents: read
   pages: write
