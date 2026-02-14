@@ -46,8 +46,8 @@ check = { cmd = "black --check notebooks/", depends-on = ["install-dev"] }
 # Book building tasks
 build-book = "jupyter book build ."
 serve-book = "python -m http.server --directory _build/html 8000"
-build-all = "BASE_URL=/ess-412-512-intro2seismology jupyter book build . && mkdir -p website && mv _build/html website/book && mkdir -p website/book/img && (cp -R lectures/scripts/figures/. website/book/img/ 2>/dev/null || true)"
-build-ci = "jupyter book build . && mkdir -p website && mv _build/html website/book && mkdir -p website/book/img && (cp -R lectures/scripts/figures/. website/book/img/ 2>/dev/null || true)"
+build-all = "BASE_URL=/ess-412-512-intro2seismology jupyter book build . && rm -rf website && mv _build/html website && mkdir -p website/img && (cp -R lectures/scripts/figures/. website/img/ 2>/dev/null || true)"
+build-ci = "jupyter book build . && rm -rf website && mv _build/html website && mkdir -p website/img && (cp -R lectures/scripts/figures/. website/img/ 2>/dev/null || true)"
 serve-all = "python -m http.server --directory website/ 3000"
 clean = "rm -rf _build website/book"
 
