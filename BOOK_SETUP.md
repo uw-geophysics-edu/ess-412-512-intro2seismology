@@ -40,7 +40,7 @@ python -m http.server --directory _build/html 8000
 
 ## LaTeX Math Rendering
 
-**Inline**: `$v$ is velocity`  
+**Inline**: `$v$ is velocity`
 **Display**: `$$ \sin\theta_1/v_1 = \sin\theta_2/v_2 $$`
 
 ## Figure Syntax

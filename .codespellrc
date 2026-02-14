@@ -1,0 +1,8 @@
+[codespell]
+# Codespell configuration for ESS 412/512 repository
+# Skip certain directories
+skip = ./_build,./website,./archive,*.lock,*.ipynb_checkpoints
+
+# Ignore common false positives from code/variable names
+# Many of these are legitimate variable names or code snippets in notebooks
+ignore-words-list = te,nd,fo,ot,ue,bu,aer,ake,acn,whn,nwo,wee,oly,teh,fof,tru,afe,ane,tge,rte,unx,sav,fpt,wya

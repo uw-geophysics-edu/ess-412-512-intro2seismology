@@ -130,7 +130,7 @@ pixi run precommit
 # Build and serve the book locally
 pixi run build-book
 pixi run serve-book
-# Visit http://localhost:3000
+# Visit http://localhost:8000
 
 # Or use all-in-one command
 pixi run build-all

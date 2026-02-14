@@ -1,6 +1,6 @@
 # Graduate Paper Presentation & Best Practices Guide
 
-**ESS 512 - Introduction to Seismology**  
+**ESS 512 - Introduction to Seismology**
 **Graduate Component**
 
 ---
@@ -14,8 +14,8 @@ Graduate students (ESS 512) are required to present **one research paper** that 
 - Scientific communication
 - Connecting theory to practice
 
-**Weight**: 15% of final grade  
-**Format**: 15-minute presentation + 5 minutes Q&A  
+**Weight**: 15% of final grade
+**Format**: 15-minute presentation + 5 minutes Q&A
 **Distributed throughout**: Weeks 5-9 (one student per week)
 
 ---
@@ -117,11 +117,11 @@ Your presentation **must** include:
   - Is code/data available?
   - Could you reproduce the results from the paper?
   - What information is missing?
-  
+
 - **Methodological Strengths**:
   - What did they do well?
   - Novel aspects?
-  
+
 - **Limitations**:
   - Assumptions that may not hold?
   - Alternative approaches?
@@ -143,7 +143,7 @@ As part of your presentation, evaluate the paper against modern publication stan
 Assess whether the paper includes:
 
 - [ ] **Code Availability**: Link to GitHub, Zenodo, or supplementary materials
-- [ ] **Data Availability**: DOI or permanent archive link  
+- [ ] **Data Availability**: DOI or permanent archive link
 - [ ] **Software Versions**: Specific versions of tools used (e.g., ObsPy 1.4.0)
 - [ ] **Parameter Documentation**: All processing parameters clearly stated
 - [ ] **Workflow Description**: Step-by-step processing flow
@@ -262,7 +262,7 @@ Does the paper follow open science principles?
 ### Surface Waves & Ambient Noise
 - Bensen et al. (2007). "Processing seismic ambient noise data to obtain reliable broad-band surface wave dispersion measurements." *GJI* 169(3), 1239-1260.
   - **Why good**: Extremely detailed methods; became community standard
-  
+
 - Lin et al. (2008). "Surface wave tomography of the western United States from ambient seismic noise: Rayleigh and Love wave phase velocity maps." *GJI* 173(1), 281-298.
   - **Why good**: Clear workflow; connects noise to structure
 

@@ -23,34 +23,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Setup pixi
         uses: prefix-dev/setup-pixi@v0.9.3
         with:
           cache: true
           frozen: true
-      
+
       - name: Validate TOC file references
         run: pixi run validate-toc
-      
+
       - name: Check Colab badges in notebooks
         run: pixi run validate-badges
-      
+
       - name: Spellcheck
         run: pixi run spellcheck
-      
+
       - name: Build book
         run: pixi run build-ci
-      
+
       - name: Linkcheck
         continue-on-error: true
         run: pixi run linkcheck
-      
+
       - name: Check website directory
         run: |
           ls -la website/
           du -sh website/
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

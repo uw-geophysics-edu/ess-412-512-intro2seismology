@@ -83,7 +83,7 @@ conda activate ess412
 
 **With Pixi (Advanced):**
 
-Install pixi on your system: 
+Install pixi on your system:
 ```bash
 curl -fsSL https://pixi.sh/install.sh | sh
 ```
@@ -136,7 +136,7 @@ The course is organized around core seismological concepts, with notebooks progr
   - Hooke's Law and elastic constants (Lamé parameters)
   - P and S wave velocities from material properties
   - Real-world geodetic examples (1992 Landers earthquake, Pinon Flat Observatory)
-  
+
 - **[02_Stress_Strain_Practice.ipynb](notebooks/02_Stress_Strain_Practice.ipynb)** (Week 2, ~3 hrs)
   - Eigenvalue analysis of stress/strain tensors
   - Principal stress directions and magnitudes
@@ -158,20 +158,20 @@ The course is organized around core seismological concepts, with notebooks progr
   - Covariance matrix eigendecomposition for rectilinearity
   - Particle motion visualization in Z-R-T coordinates
   - Helmholtz decomposition (divergence and curl)
-  
+
 - **[03b_Ray_Tracing_Cartesian_Practice.ipynb](notebooks/03b_Ray_Tracing_Cartesian_Practice.ipynb)** (Week 3-4, ~3 hrs)
   - Shearer Chapter 4
   - 2D ray tracing in Cartesian coordinates using PyKonal
   - Eikonal equation solver for travel-time fields
   - Curved layers, low-velocity zones, and ray focusing
   - Travel-time residuals from structure vs source location errors
-  
+
 - **[03c_Ray_Tracing_Global_Practice.ipynb](notebooks/03c_Ray_Tracing_Global_Practice.ipynb)** (Week 4, ~2 hrs)
   - Shearer Chapters 4-5
   - Spherical Earth models (iasp91, PREM)
   - TauP toolkit for global ray tracing
   - Ray geometry in 2D/3D through Earth's interior
-  
+
 - **[03d_Global_Phases_Practice.ipynb](notebooks/03d_Global_Phases_Practice.ipynb)** (Week 4, ~3 hrs)
   - Shearer Chapters 4-5
   - Body wave phase identification (P, S, PcP, ScS, PKP, SKS, etc.)
@@ -186,7 +186,7 @@ The course is organized around core seismological concepts, with notebooks progr
   - SH and P-SV reflection and transmission coefficients
   - Post-critical incidence and total internal reflection
   - Complex coefficients and attenuation
-  
+
 - **[04b_Reflection_CMP_Practice.ipynb](notebooks/04b_Reflection_CMP_Practice.ipynb)** (Week 5, ~1 hr)
   - Reflection seismology basics
   - Common midpoint (CMP) gathers
@@ -210,14 +210,14 @@ The course is organized around core seismological concepts, with notebooks progr
   - Numerical solution of dispersion equation
   - Particle motion (retrograde elliptical)
   - Depth sensitivity kernels
-  
+
 - **[05b_Love_Waves_Theory.ipynb](notebooks/05b_Love_Waves_Theory.ipynb)** (Week 6, ~2 hrs)
   - Shearer Chapter 7
   - Love wave theory: SH-guided waves in layered media
   - Layer-over-halfspace dispersion curves
   - Eigenfunctions and particle motion
   - Comparison with Rayleigh waves
-  
+
 - **[05c_Surface_Waves_Practice.ipynb](notebooks/05c_Surface_Waves_Practice.ipynb)** (Week 7, ~4 hrs)
   - Shearer Chapter 7
   - Group velocity vs. phase velocity measurement
@@ -247,7 +247,7 @@ The course is organized around core seismological concepts, with notebooks progr
   - PyKonal eikonal solver for curved rays
   - Resolution tests (checkerboard patterns)
   - Regularization parameter selection
-  
+
 - **[toy_surface_wave_inversion.ipynb](notebooks/toy_surface_wave_inversion.ipynb)** (~4 hrs)
   - End-to-end surface wave inversion workflow
   - F-K spectrum analysis → dispersion curve measurement
@@ -269,7 +269,7 @@ The `lectures/` directory contains focused teaching materials designed for effic
 
 ### Available Lecture Notes
 
-- **[02_Stress_Strain_Lecture.md](lectures/02_Stress_Strain_Lecture.md)**: 
+- **[02_Stress_Strain_Lecture.md](lectures/02_Stress_Strain_Lecture.md)**:
   - 15-20 minute lecture on elastic wave fundamentals
   - Comprehensive coverage: stress/strain tensors, Hooke's Law, wave speeds
   - Real-world geodetic examples (Pinon Flat Observatory, 1992 Landers earthquake)
@@ -285,7 +285,7 @@ The `lectures/` directory contains focused teaching materials designed for effic
 
 ### Graduate Student Resources
 
-- **[Graduate_Paper_Presentation.md](lectures/Graduate_Paper_Presentation.md)**: 
+- **[Graduate_Paper_Presentation.md](lectures/Graduate_Paper_Presentation.md)**:
   - ESS 512 only: How to prepare a research paper presentation
   - Selecting papers that connect course methods to published research
   - Presentation structure and best practices
@@ -395,8 +395,8 @@ This work is licensed under the MIT License - see [LICENSE](LICENSE) file for de
 
 ## Contact
 
-**Instructor**: Marine Denolle  
-**Course**: ESS 412/512, University of Washington  
+**Instructor**: Marine Denolle
+**Course**: ESS 412/512, University of Washington
 **Repository**: https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology
 
 For course-related questions, use Canvas discussion board. For repository issues, use GitHub Issues.

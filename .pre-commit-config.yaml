@@ -71,7 +71,7 @@ repos:
 # - repo: local
 #   hooks:
 #     - id: jupyter-book-build
-#       name: Build Jupyter Book  
+#       name: Build Jupyter Book
 #       entry: jupyter book build .
 #       language: system
 #       pass_filenames: false

@@ -1,6 +1,6 @@
 # Stress and Strain: Elastic Properties of Earth Materials
 
-**Duration:** 30 minutes  
+**Duration:** 30 minutes
 **Learning Objectives:**
 - Derive Lamé parameters from seismic velocities
 - Apply 2D stress-strain constitutive relationships
@@ -29,7 +29,7 @@ Before introducing elastic constants or constitutive laws, we must understand **
 
 ### 2.1 Traction: Force Acting on an Oriented Surface
 
-Consider an infinitesimal surface element of area ΔA inside a solid. This surface is characterized by a **unit normal vector**  
+Consider an infinitesimal surface element of area ΔA inside a solid. This surface is characterized by a **unit normal vector**
  $$
  \hat{\mathbf{n}}
  $$
@@ -147,7 +147,7 @@ $$
 
 Strain measures **relative deformation**, not absolute motion. It is defined from spatial gradients of displacement.
 
-Example: A 100 m long bar stretched uniformly to 101 m  
+Example: A 100 m long bar stretched uniformly to 101 m
 $$
 \epsilon = \frac{\Delta L}{L} = 0.01
 $$
@@ -314,7 +314,7 @@ import numpy as np
 from numpy import linalg as la
 
 # Define 2D stress tensor
-sigma = np.array([[s11, s12], 
+sigma = np.array([[s11, s12],
                   [s12, s22]])
 
 # Compute eigenvalues and eigenvectors
@@ -343,14 +343,14 @@ azimuth = np.degrees(np.arctan2(eigenvectors[0, 0], eigenvectors[1, 0]))
 ## 9. Key Takeaways
 
 1. **Lamé parameters** (λ, μ) connect seismic velocities to elastic response:
-   - $\mu = \rho v_s^2$  
+   - $\mu = \rho v_s^2$
    - $\lambda = \rho(v_p^2 - 2v_s^2)$
 
 2. **Stress-strain relationship** (Hooke's Law):
    - $\sigma_{ij} = \lambda \epsilon_{kk}\delta_{ij} + 2\mu\epsilon_{ij}$
 
 3. **Geodetic strain** from GPS/InSAR:
-   - Tectonic: ~$10^{-7}$/yr  
+   - Tectonic: ~$10^{-7}$/yr
    - Earthquake: ~$10^{-6}$ (sudden)
 
 4. **Principal stresses** from eigenvalue decomposition:
@@ -363,4 +363,3 @@ azimuth = np.degrees(np.arctan2(eigenvectors[0, 0], eigenvectors[1, 0]))
 
 ## 10. References & Further Reading
 - **1992 Landers Earthquake:** Wald & Heaton (1994), *BSSA*
-

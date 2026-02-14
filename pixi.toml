@@ -21,6 +21,7 @@ seaborn = ">=0.11"
 plotly = ">=5.0"
 jupyter-book = ">=1.0,<2"
 codespell = "*"
+pre-commit = "*"
 ipykernel = ">=6.0"
 h5py = ">=3.0"
 
@@ -44,7 +45,7 @@ check = { cmd = "black --check notebooks/", depends-on = ["install-dev"] }
 
 # Book building tasks
 build-book = "jupyter book build ."
-serve-book = "jupyter book serve ."
+serve-book = "python -m http.server --directory _build/html 8000"
 build-all = "BASE_URL=/ess-412-512-intro2seismology jupyter book build . && mv _build/html website/book && mkdir -p website/book/img && cp -R lectures/scripts/figures/. website/book/img/ 2>/dev/null || true"
 build-ci = "jupyter book build . && mv _build/html website/book && mkdir -p website/book/img && cp -R lectures/scripts/figures/. website/book/img/ 2>/dev/null || true"
 serve-all = "python -m http.server --directory website/ 3000"
@@ -53,11 +54,13 @@ clean = "rm -rf _build website/book"
 # Validation tasks
 validate-toc = "python scripts/validate_toc.py"
 validate-badges = "python scripts/check_colab_badges.py"
-validate = { cmd = "python scripts/validate_toc.py && python scripts/check_colab_badges.py", depends-on = ["validate-toc", "validate-badges"] }
+validate-whitespace = "pre-commit run trailing-whitespace --all-files"
+validate-eof = "pre-commit run end-of-file-fixer --all-files"
+validate = { cmd = "pre-commit run trailing-whitespace --all-files && pre-commit run end-of-file-fixer --all-files && python scripts/validate_toc.py && python scripts/check_colab_badges.py", depends-on = ["validate-toc", "validate-badges", "validate-whitespace", "validate-eof"] }
 
 # Quality checks
 linkcheck = "jupyter book build . --builder linkcheck"
-spellcheck = "codespell --skip ./_build,./website,pixi.lock"
+spellcheck = "python scripts/spellcheck_notebooks.py"
 
 # Pre-commit workflow (run before committing changes)
 precommit = { cmd = "python scripts/validate_toc.py && python scripts/check_colab_badges.py && jupyter book build .", depends-on = ["validate"] }

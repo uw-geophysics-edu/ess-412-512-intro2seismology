@@ -11,7 +11,7 @@ After this lecture, students should be able to:
 ---
 
 ## Context and scope
-This lecture introduces the **conceptual core of ray theory**.  
+This lecture introduces the **conceptual core of ray theory**.
 We focus on *geometry and timing*, not amplitudes or full wavefields.
 
 Ray theory is a **high-frequency approximation**: it describes where energy travels, not how waveforms interfere. Despite its limitations, it underpins:
@@ -26,12 +26,12 @@ This material corresponds primarily to **Shearer (2009), Chapter 4.1–4.2**.
 
 ## 1. Plane waves and interfaces: the physical picture
 
-Consider a plane seismic wave propagating through a homogeneous medium.  
+Consider a plane seismic wave propagating through a homogeneous medium.
 Wavefronts are surfaces of constant phase, and **rays are normal to wavefronts**.
 
 When such a wave encounters a **horizontal interface**, two constraints must be satisfied:
 
-1. **Continuity of arrival time** along the interface  
+1. **Continuity of arrival time** along the interface
 2. **Stationarity of total travel time** between source and receiver (Fermat’s principle)
 
 These constraints force rays to bend.
@@ -175,8 +175,8 @@ Students should answer these *before* seeing numerical ray tracing.
 ---
 
 ## What we deliberately did *not* do
-- No full derivation from the eikonal equation  
-- No amplitudes, caustics, or head waves yet  
+- No full derivation from the eikonal equation
+- No amplitudes, caustics, or head waves yet
 - No spherical geometry yet
 
 
@@ -191,6 +191,5 @@ Next, we will:
 ---
 
 ## Reading
-- Shearer, P. M. (2009), *Introduction to Seismology*, 2nd ed.  
+- Shearer, P. M. (2009), *Introduction to Seismology*, 2nd ed.
   **Chapter 4.1–4.2** (Snell’s law and ray paths)
-

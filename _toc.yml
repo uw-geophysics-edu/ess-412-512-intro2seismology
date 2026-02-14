@@ -22,10 +22,8 @@ parts:
         title: "Lab 3a: Body Wave Polarization"
       - file: notebooks/03b_Ray_Tracing_Cartesian_Practice
         title: "Lab 3b: 2D Ray Tracing (Cartesian)"
-      - file: notebooks/03c_Ray_Tracing_Global_Practice
-        title: "Lab 3c: Ray Tracing (Global)"
-      - file: notebooks/03d_Global_Phases_Practice
-        title: "Lab 3d: Global Phase Observations"
+      - file: notebooks/03c_Global_Phases_Practice
+        title: "Lab 3c: Global Phase Observations"
 
   - caption: Module 4 - Reflection Seismology
     chapters:
@@ -60,5 +58,5 @@ parts:
     chapters:
       - file: lectures/Graduate_Paper_Presentation
         title: "Graduate Guidelines - ESS 512"
-      - file: notebooks/Midterm_Integrated_Assignment
+      - file: homework/Midterm_Integrated_Assignment
         title: "Midterm: Integrated Assignment"
