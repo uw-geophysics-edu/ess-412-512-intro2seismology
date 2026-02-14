@@ -37,7 +37,7 @@ bash Miniforge3-Linux-x86_64.sh
 
 ```bash
 # Clone the repository
-git clone https://github.com/marinedenolle/ess-412-512-intro2seismology.git
+git clone https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology.git
 cd ess-412-512-intro2seismology
 
 # Create environment from environment.yml
@@ -90,7 +90,7 @@ Restart your terminal after installation.
 
 ```bash
 # Clone the repository
-git clone https://github.com/marinedenolle/ess-412-512-intro2seismology.git
+git clone https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology.git
 cd ess-412-512-intro2seismology
 
 # Install dependencies (creates pixi.lock automatically)
@@ -244,7 +244,7 @@ pixi run python -m ipykernel install --user --name ess412-pixi
 
 ## Getting Help
 
-1. **Check existing issues**: https://github.com/marinedenolle/ess-412-512-intro2seismology/issues
+1. **Check existing issues**: https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology/issues
 2. **ObsPy documentation**: https://docs.obspy.org/
 3. **Course Canvas**: Post questions in the technical help forum
 4. **Office hours**: See syllabus for schedule

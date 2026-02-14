@@ -140,7 +140,7 @@ sphinx:
 
 ## 🔗 Update Your Course Page
 
-Add this to your website at https://denolle-lab.github.io/teaching/ess412/:
+Add this to your website at [denolle-lab.github.io/teaching/ess412/](https://denolle-lab.github.io/teaching/ess412/):
 
 ```markdown
 ## 📚 Course Materials
