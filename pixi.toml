@@ -56,14 +56,12 @@ validate-toc = "python scripts/validate_toc.py"
 validate-badges = "python scripts/check_colab_badges.py"
 validate-whitespace = "pre-commit run trailing-whitespace --all-files"
 validate-eof = "pre-commit run end-of-file-fixer --all-files"
-validate = { cmd = "pre-commit run trailing-whitespace --all-files && pre-commit run end-of-file-fixer --all-files && python scripts/validate_toc.py && python scripts/check_colab_badges.py", depends-on = ["validate-toc", "validate-badges", "validate-whitespace", "validate-eof"] }
-
-# Quality checks
-linkcheck = "jupyter book build . --builder linkcheck"
-spellcheck = "python scripts/spellcheck_notebooks.py"
+spellcheck = "codespell --skip './_build,./website,pixi.lock,*.ipynb,*.js,*.css,*.map,*.svg,*.pdf,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.eot,*.ttf,*.woff,*.woff2' --ignore-words-list='hist,nd,te,ba'"
+linkcheck = "jupyter-book build --builder linkcheck ."
+validate = { cmd = "pre-commit run --all-files && pixi run spellcheck && pixi run build-ci && pixi run linkcheck", depends-on = ["install-dev"] }
 
 # Pre-commit workflow (run before committing changes)
-precommit = { cmd = "python scripts/validate_toc.py && python scripts/check_colab_badges.py && jupyter book build .", depends-on = ["validate"] }
+precommit = { cmd = "python scripts/validate_toc.py && python scripts/check_colab_badges.py && jupyter-book build .", depends-on = ["install-dev"] }
 
 [tasks.install-dev]
 cmd = "echo 'Dev dependencies installed'"

@@ -36,6 +36,11 @@ parse:
 
 sphinx:
   config:
+    linkcheck_ignore:
+      - "http://localhost:.*"
+      - "https://uw-geophysics-edu.github.io/ess-412-512-intro2seismology/.*"
+      - "https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology/settings/pages"
+      - "https://github.com/uw-geophysics-edu/ess-412-512-intro2seismology/actions"
     exclude_patterns:
       - ".pixi/**"
       - ".venv/**"
