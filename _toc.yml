@@ -27,7 +27,7 @@ parts:
 
   - caption: Module 4 - Reflection Seismology
     chapters:
-      - file: notebooks/04a_Reflection_Coefficients_Theory
+      - file: notebooks/04a_Reflection_Transmission_Theory
         title: "Lab 4a: Reflection & Transmission"
       - file: notebooks/04b_Reflection_CMP_Practice
         title: "Lab 4b: CMP, NMO & Migration"
