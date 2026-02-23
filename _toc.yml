@@ -45,6 +45,13 @@ parts:
       - file: notebooks/05d_Noise_CrossCorrelation_Practice
         title: "Lab 5d: Ambient Noise Cross-Correlation"
 
+  - caption: Module 6 - Earthquake Sources
+    chapters:
+      - file: lectures/earthquake-location
+        title: "Lecture: The Inverse Problem"
+      - file: notebooks/06a_Earthquake_Location_Practice
+        title: "Lab 6a: Location Methods & Uncertainties"
+
   - caption: Optional - Advanced Topics
     chapters:
       - file: lectures/tomography-lecture-whiteboard
