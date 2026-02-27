@@ -52,6 +52,13 @@ parts:
       - file: notebooks/06a_Earthquake_Location_Practice
         title: "Lab 6a: Location Methods & Uncertainties"
 
+  - caption: Module 7 - Moment Tensors
+    chapters:
+      - file: lectures/moment-tensor
+        title: "Lecture: Moment Tensors"
+      - file: notebooks/07a_Moment_Tensor_Practice
+        title: "Lab 7a: Moment Tensor Decomposition"
+
   - caption: Optional - Advanced Topics
     chapters:
       - file: lectures/tomography-lecture-whiteboard
