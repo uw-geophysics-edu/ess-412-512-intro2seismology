@@ -120,20 +120,22 @@ A double couple produces a **four-lobed radiation pattern** with two orthogonal 
 - One is the **auxiliary plane** (geometrically required by symmetry)
 
 ```
-         +  (compression)
-         |
-    _____|_____
-   /     |     \
-  /   −  |  −   \   (dilatation)
- |   (T) | (T)   |
--|-------★-------|--  ← nodal plane 1
- |   (P) | (P)   |
-  \   +  |  +   /   (compression)
-   \_____↓_____/
-         |
-         −  (dilatation)
++ (compression)                − (dilatation)
+       \                          /
+        \           |            /
+    _____|__________|___________|_____
+   /                |                 \
+  /     (P)    +    |    −    (T)      \
+ |                  |                   |
+-|-----------------★-------------------|-- ← nodal plane 1
+ |                  |                   |
+  \     (T)    −    |    +    (P)      /
+   \________________|_________________/
+        /           |            \
+       /                          \
+− (dilatation)                + (compression)
 
-         ↑ nodal plane 2
+                    ↑ nodal plane 2
 ```
 
 **Why two planes?** Far-field P-wave radiation depends on the product $(\hat{n} \cdot \hat{s})$, where $\hat{n}$ is fault normal and $\hat{s}$ is slip direction. Swapping $\hat{n} \leftrightarrow \hat{s}$ gives **identical radiation** — so far-field data alone cannot distinguish the fault plane from the auxiliary plane.
