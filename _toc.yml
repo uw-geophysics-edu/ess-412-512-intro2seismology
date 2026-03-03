@@ -52,12 +52,22 @@ parts:
       - file: notebooks/06a_Earthquake_Location_Practice
         title: "Lab 6a: Location Methods & Uncertainties"
 
-  - caption: Module 7 - Moment Tensors
+  - caption: Module 7 - Moment Tensors & Magnitudes
     chapters:
       - file: lectures/moment-tensor
         title: "Lecture: Moment Tensors"
       - file: notebooks/07a_Moment_Tensor_Practice
         title: "Lab 7a: Moment Tensor Decomposition"
+      - file: lectures/07b-radiation-patterns
+        title: "Lecture: Radiation Patterns"
+      - file: notebooks/07b_Radiation_Pattern_Synthetic
+        title: "Lab 7b: Radiation Pattern Practice"
+      - file: lectures/07c-magnitudes
+        title: "Lecture: Earthquake Magnitudes"
+      - file: notebooks/07b_magnitudes
+        title: "Lab 7c: Magnitude Catalog Exploration"
+      - file: notebooks/07c-magnitude-lab
+        title: "Lab 7d: Measuring Magnitudes"
 
   - caption: Optional - Advanced Topics
     chapters:
