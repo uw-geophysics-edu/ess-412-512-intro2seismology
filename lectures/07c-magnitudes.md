@@ -13,11 +13,7 @@ After this lecture, students should be able to:
 
 ## Context and scope
 
-This lecture addresses a deceptively simple question: **how do we assign a number to the size of an earthquake?**
-
-Earthquake magnitude is not a directly measured physical quantity. It is an **empirically calibrated mapping** from features of recorded seismograms — typically amplitudes, spectral ratios, or signal durations — to a scalar that summarizes event size. Every magnitude scale embeds specific choices about instrumentation, frequency band, phase selection, distance correction, and site terms. These choices determine the scale's applicability, its sensitivity to source properties, and the regimes in which it fails.
-
-This lecture develops five principal magnitude scales ($M_L$, $m_b$, $M_s$, $M_d/M_c$, $M_w$), examines their physical basis and calibration assumptions, and explains why they diverge — particularly through **saturation** of band-limited measurements. We connect these scales to the **omega-square source spectrum** to provide a unified physical framework for understanding when and why different magnitudes agree or disagree.
+This lecture develops five principal magnitude estimates ($M_L$, $m_b$, $M_s$, $M_d/M_c$, $M_w$), examines their physical basis and calibration assumptions, and explains why they diverge — particularly through **saturation** of band-limited measurements. We connect these scales to the **omega-square source spectrum** to provide a unified physical framework for understanding when and why different magnitudes agree or disagree.
 
 **Connections to other modules:**
 - **Module 7 (Moment Tensors):** The scalar seismic moment $M_0$ obtained from moment tensor inversion is the observable underlying $M_w$.
@@ -28,7 +24,7 @@ This material corresponds primarily to **Shearer (2009), *Introduction to Seismo
 
 ---
 
-## 1. Magnitude as a calibrated mapping
+## 1. Magnitude as distance calibration
 
 Earthquake magnitude is defined through an empirical regression that maps a seismogram measurement to event size. The general form shared by most magnitude scales is:
 

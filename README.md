@@ -375,6 +375,55 @@ All exercises use real seismic data from:
 
 No authentication required for course exercises. All data downloads are automated within notebooks.
 
+## References & Citations
+
+The book uses a shared BibTeX bibliography stored in [`references.bib`](references.bib).
+[sphinxcontrib-bibtex](https://sphinxcontrib-bibtex.readthedocs.io/) renders the
+citations when the Jupyter Book is built.
+
+### How to add a new reference
+
+1. Open `references.bib` and add a standard BibTeX entry (keep entries sorted alphabetically by cite key).
+2. Choose a cite key of the form `AuthorYear` or `AuthorAuthorYear`, e.g. `Shearer2009`, `HanksKanamori1979`.
+
+### How to cite in Markdown / notebooks
+
+In any **MyST Markdown** (`.md`) file or **Jupyter notebook Markdown cell**, use:
+
+| Syntax | Rendered as |
+|--------|-------------|
+| `` {cite}`Shearer2009` `` | Inline citation (e.g., [1]) |
+| `` {cite:p}`Shearer2009` `` | Parenthetical — (Shearer, 2009) |
+| `` {cite:t}`Shearer2009` `` | Textual — Shearer (2009) |
+| `` {cite}`Shearer2009,AkiRichards2002` `` | Multiple citations |
+
+### How to print a bibliography on a page
+
+Add the following at the bottom of any `.md` lecture or notebook Markdown cell:
+
+````markdown
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+````
+
+The `:filter: docname in docnames` directive prints only the references that were
+actually cited on that page.  To print the full bibliography, omit the filter line.
+
+### Quick example
+
+```markdown
+Shearer {cite:p}`Shearer2009` provides an excellent introduction.
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+```
+
 ## Contributing
 
 This is an evolving course repository. Suggestions and contributions are welcome:

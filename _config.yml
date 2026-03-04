@@ -25,6 +25,10 @@ launch_buttons:
   binderhub_url: https://mybinder.org
   colab_url: https://colab.research.google.com
 
+# Bibliography
+bibtex_bibfiles:
+  - references.bib
+
 # Enable search and advanced features
 parse:
   myst_enable_extensions:
@@ -35,6 +39,8 @@ parse:
     - substitution
 
 sphinx:
+  extra_extensions:
+    - sphinxcontrib.bibtex
   config:
     linkcheck_ignore:
       - "http://localhost:.*"
