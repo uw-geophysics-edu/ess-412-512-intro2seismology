@@ -64,10 +64,12 @@ parts:
         title: "Lab 7b: Radiation Pattern Practice"
       - file: lectures/07c-magnitudes
         title: "Lecture: Earthquake Magnitudes"
-      - file: notebooks/07c-magnitude-lab
-        title: "Lab 7c: Magnitude Concepts & Saturation"
-      - file: notebooks/07d_Magnitude_Measurement_Practice
-        title: "Lab 7d: Measuring ML, mb, Ms"
+      - file: notebooks/07c_Magnitude_Lab
+        title: "Lab 7c: Earthquake Magnitudes"
+      - file: lectures/07d_source_dynamic
+        title: "Lecture: Earthquake Source Dynamics"
+      - file: notebooks/07d_source_dynamic
+        title: "Lab 7d: STF, Spectra & Energy Budget"
 
   - caption: Optional - Advanced Topics
     chapters:

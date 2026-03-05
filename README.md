@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Deploy Jupyter Book](https://github.com/UW-geophysics-edu/ess-412-512-intro2seismology/actions/workflows/deploy-book.yml/badge.svg)](https://github.com/UW-geophysics-edu/ess-412-512-intro2seismology/actions/workflows/deploy-book.yml)
 
-Computational labs and lectures for **ESS 412** (undergraduate) and **ESS 512** (graduate) seismology at the University of Washington. Materials supplement Peter Shearer's *Introduction to Seismology* with hands-on Python exercises using real seismic data.
+Computational labs and lectures for **ESS 412** (undergraduate) and **ESS 512** (graduate) seismology at the University of Washington by Marine Denolle. Materials supplement Peter Shearer's *Introduction to Seismology* with hands-on Python exercises using real seismic data.
 
 **📖 Course site:** <https://uw-geophysics-edu.github.io/ess-412-512-intro2seismology/>
 
