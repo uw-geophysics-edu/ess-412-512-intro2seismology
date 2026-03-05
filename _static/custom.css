@@ -1,0 +1,40 @@
+/* ── Base font sizing (fixes "zoomed out" appearance) ───────────────── */
+:root {
+    --pst-font-size-base: 17px;
+    --pst-font-size-h1: 2.2rem;
+    --pst-font-size-h2: 1.7rem;
+    --pst-font-size-h3: 1.35rem;
+    --pst-font-size-h4: 1.15rem;
+}
+
+html {
+    font-size: var(--pst-font-size-base);
+}
+
+/* Constrain content width for readability */
+.bd-article-container {
+    max-width: 52em;
+}
+
+/* ── Cyan hover on all links ───────────────────────────────────────── */
+a:hover,
+a.reference:hover,
+a.internal:hover,
+a.external:hover,
+.bd-sidebar-primary a:hover,
+.bd-sidebar-secondary a:hover,
+.navbar a:hover {
+    color: cyan !important;
+}
+
+/* Citation back-reference links */
+.citation a:hover,
+.bibtex a:hover,
+dt a:hover {
+    color: cyan !important;
+}
+
+/* ── Sidebar logo ─────────────────────────────────────────────────── */
+.navbar-brand img {
+    max-height: 80px;
+}

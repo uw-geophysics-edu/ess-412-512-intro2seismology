@@ -84,3 +84,8 @@ parts:
         title: "Graduate Guidelines - ESS 512"
       - file: homework/Midterm_Integrated_Assignment
         title: "Midterm: Integrated Assignment"
+
+  - caption: References
+    chapters:
+      - file: bibliography
+        title: "Full Bibliography"

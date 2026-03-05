@@ -2,6 +2,7 @@
 title: "ESS 412/512: Introduction to Seismology"
 author: Marine Denolle
 copyright: "2026"
+logo: _static/logo.png
 
 # Don't execute notebooks (they require data downloads)
 execute:
@@ -18,6 +19,9 @@ html:
   use_repository_button: true
   use_edit_page_button: true
   baseurl: https://uw-geophysics-edu.github.io/ess-412-512-intro2seismology/
+  favicon: _static/logo.png
+  extra_css:
+    - _static/custom.css
 
 # Launch buttons for students
 launch_buttons:
@@ -42,6 +46,8 @@ sphinx:
   extra_extensions:
     - sphinxcontrib.bibtex
   config:
+    bibtex_reference_style: author_year
+    bibtex_default_style: plain
     linkcheck_ignore:
       - "http://localhost:.*"
       - "https://uw-geophysics-edu.github.io/ess-412-512-intro2seismology/.*"
