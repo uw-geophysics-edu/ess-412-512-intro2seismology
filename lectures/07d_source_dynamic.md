@@ -80,7 +80,7 @@ simulations the Brune $k$ factor is not constant — it depends on the dynamic r
 
 ## 4. Radiated energy and apparent stress
 
-**Radiated energy** $E_R$ is the total seismic energy carried away in far-field waves. To avoid the full wavefield integral we define the **apparent stress**:
+**Radiated energy** $E_R$ is the total seismic energy carried away in far-field waves and proportional to moment. To compare $E_R$ with $\Delta\sigma$,  we define the **apparent stress**:
 
 $$
 \boxed{\sigma_a \equiv \mu\,\frac{E_R}{M_0}.}
@@ -135,6 +135,66 @@ Natural STFs are rarely simple Brune pulses. Sub-event complexity (multiple aspe
 
 ---
 
+## 7. Research Relevance
+
+The three core observables — corner frequency / directivity, stress drop, and radiated energy — are each the focus of recent work, which shows they are **not equally direct windows** into rupture physics.
+
+### 7.1 Directivity and what STFs/spectra actually measure
+
+Rupture velocity $V_r$ causes directivity: forward stations see shorter apparent durations and higher $f_c$; backward stations see the opposite. Recent work shows source complexity produces the same signatures:
+
+- **Observed**: {cite:t}`Neely2024` show that real STFs are more complex than a single Brune pulse, and this complexity degrades agreement between time-domain and frequency-domain stress-drop methods.
+- **Simulated**: {cite:t}`Lin2025` simulate elongated, unilateral, and ring-like ruptures and find that inferred $f_c$ depends strongly on source geometry and station coverage — not just $V_r$.
+- **Laboratory**: {cite:t}`Kilgore2025` provide a control case with sources too small for sustained directivity, isolating the spectral signature of local frictional dynamics and energy partition.
+
+```{warning}
+A short STF pulse is not automatically a fast rupture — source complexity and geometry
+produce the same observational signature as high $V_r$.
+```
+
+### 7.2 Stress drop: useful, but model dependent
+
+The standard route
+
+$$
+M_0 , f_c \to r \approx k\,\frac{\beta}{f_c} \to \Delta\sigma \sim \frac{M_0}{r^3}
+$$
+
+yields an **inference**, not a direct observable.
+
+- **Observed**: {cite:t}`Ji2022` show $\Delta\sigma$ estimates differ by factors of several across source spectral models. {cite:t}`Neely2024` show STF complexity further degrades agreement between time- and frequency-domain methods.
+- **Simulated**: {cite:t}`Lin2025` find true fault stress drops of 1.5–5 MPa yet seismologically inferred values spanning 0.01–100 MPa; second-moment methods outperform simple spectral fitting.
+- **Laboratory**: {cite:t}`Kilgore2025` show that even with controlled geometry the measured spectral stress drop depends on how the source populates the spectrum ($f^{-1}$ vs $f^{-2}$ behavior).
+
+**Key message:** Spectral stress drop is a model-dependent summary statistic, not a uniquely determined physical property.
+
+### 7.3 Radiated energy and the energy budget
+
+Apparent stress $\sigma_a = \mu E_R / M_0$ is a **less model-dependent anchor** than $f_c$-based stress drop:
+
+- **Observed**: {cite:t}`Ji2022` show that different spectral models imply broadly similar radiation efficiencies even when their $\Delta\sigma$ estimates differ — $E_R$ stabilizes interpretation.
+- **Simulated**: {cite:t}`Lin2025` compute on-fault stress-drop averages directly, enabling comparison of what the fault did versus what far-field waveforms imply.
+- **Laboratory**: {cite:t}`Kilgore2025` infer that ≥95% of released energy does not escape to the far field; high-frequency spectral richness reflects energy partitioning, not just source size.
+
+{cite:t}`Cocco2023` frame the full balance $\Delta W = E_R + E_{FZ}$ and partition the fault-zone term into rupture-propagation, on-fault, and off-fault contributions. In the linear slip-weakening framework the energy dissipated at the rupture front is:
+
+$$
+G = \tfrac{1}{2}(\tau_p - \tau_r)\,D_c.
+$$
+
+**Key message:** $E_R$ and $\sigma_a$ bridge spectra to the energy budget; missing energy partitions into on-fault dissipation, off-fault damage, and fracture energy.
+
+### 7.4 Synthesis
+
+| Perspective | Paper | Key result |
+|---|---|---|
+| Observed | {cite:t}`Neely2024` | STF complexity biases $f_c$ and $\Delta\sigma$; creates apparent magnitude trends |
+| Simulated | {cite:t}`Lin2025` | Most catalog $\Delta\sigma$ scatter is consistent with geometry/complexity artifacts |
+| Laboratory | {cite:t}`Kilgore2025` | Earthquake-like spectra emerge when ≥95% of energy stays near the source |
+| Energy budget | {cite:t}`Cocco2023` | Non-radiated energy partitions into on-fault dissipation, off-fault damage, and fracture energy |
+
+---
+
 ## Check your understanding
 
 1. A network observes $f_c = 0.5$ Hz in the forward direction and $f_c = 0.2$ Hz in the backward direction for the same event. Estimate $V_r / c$ assuming unilateral rupture.
@@ -169,11 +229,3 @@ The companion notebook (Lab 7d) lets you build synthetic STFs, apply the toy-dir
 - {cite:t}`Kilgore2025` — laboratory stress drop and spectral estimates
 - {cite:t}`Lin2025` — dynamic simulation stress-drop estimates on rate-and-state faults
 - {cite:t}`Neely2024` — STF complexity and stress-drop bias
-
----
-
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```
