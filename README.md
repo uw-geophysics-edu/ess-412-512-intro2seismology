@@ -90,7 +90,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for notebook conventions, naming, and val
 
 - Course structure based on Peter Shearer's *Introduction to Seismology* (Cambridge University Press)
 - Built with [ObsPy](https://obspy.org/), [Jupyter Book](https://jupyterbook.org/), and [sphinxcontrib-bibtex](https://sphinxcontrib-bibtex.readthedocs.io/)
-- Seismic data from [IRIS DMC](https://ds.iris.edu/ds/) via FDSN web services
+- Seismic data from [Earthscope Consortium](https://www.earthscope.org/) via FDSN web services
 
 ## License
 

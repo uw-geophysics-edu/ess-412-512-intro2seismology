@@ -71,6 +71,13 @@ parts:
       - file: notebooks/07d_source_dynamic
         title: "Lab 7d: STF, Spectra & Energy Budget"
 
+  - caption: Module 8 - Earthquake Dynamics
+    chapters:
+      - file: lectures/08_nucleation_dynamics
+        title: "Lecture: Nucleation & Dynamic Rupture"
+      - file: notebooks/08_Nucleation_Dynamics_Practice
+        title: "Lab 8: Nucleation & Dynamic Rupture"
+
   - caption: Optional - Advanced Topics
     chapters:
       - file: lectures/tomography-lecture-whiteboard

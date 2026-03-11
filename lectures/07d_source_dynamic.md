@@ -208,7 +208,7 @@ $$
 ## What we deliberately did not cover
 
 - Full waveform inversion for dynamic rupture parameters
-- Rate-and-state friction derivations and thermal pressurization models of $D_c$
+- Rate-and-state friction derivations and thermal pressurization models of $D_c$ (the instability mechanism and slip-weakening framework are introduced in Module 8)
 - Off-fault damage effects on the energy budget
 - Finite-fault slip models and their relationship to spectral $f_c$
 
@@ -218,11 +218,13 @@ $$
 
 The companion notebook (Lab 7d) lets you build synthetic STFs, apply the toy-directivity warp, estimate $f_c$ from spectra, compute a radiated-energy proxy, and explore the energy-budget sandbox — all with the equations developed here.
 
+In **Module 8** we turn from *observing* source dynamics to *explaining* them: why does slip become unstable, what controls the nucleation zone size, and what determines whether rupture propagates or arrests.
+
 ---
 
 ## Reading
 
-📖 *Shearer:* Sections 9.7, 10.3
+📖 *Shearer:* Sections 9.5, 9.6
 
 - {cite:t}`Cocco2023` — fracture energy and breakdown work (comprehensive review)
 - {cite:t}`Ji2022` — reconciling spectral stress-drop variability via $E_R$
