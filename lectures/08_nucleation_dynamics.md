@@ -1,5 +1,9 @@
 # Lecture: Earthquake Nucleation and Dynamic Rupture
 
+```{note}
+This lecture was AI generated with scanned images of hand written notes, but it has not been iterated on. I noticed hallucinations in the graph and remaining challenges in explaining the flow. I will iterate on it.
+```
+
 ## Learning objectives
 
 - **Instability**: Explain why earthquakes nucleate as a frictional instability on faults.
