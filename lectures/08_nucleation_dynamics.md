@@ -283,6 +283,8 @@ The spring–slider and slip-weakening models are pedagogical idealizations. Rea
 
 The companion notebook (Lab 8) lets you simulate the spring–slider instability, visualize slip-weakening friction for different parameter choices, and explore how the critical nucleation size $L_c$ depends on fault properties.
 
+In the final lecture (Module 9) we step back to see the full architecture of the course — how every module connects — and survey five research frontiers (ML/AI, DAS, earthquake early warning, slow earthquakes, and planetary seismology) that directly extend the concepts developed here.
+
 ---
 
 ## Reading

@@ -78,6 +78,11 @@ parts:
       - file: notebooks/08_Nucleation_Dynamics_Practice
         title: "Lab 8: Nucleation & Dynamic Rupture"
 
+  - caption: Module 9 - Synthesis & Frontiers
+    chapters:
+      - file: lectures/09_synthesis_frontiers
+        title: "Lecture: Synthesis & Frontiers"
+
   - caption: Optional - Advanced Topics
     chapters:
       - file: lectures/tomography-lecture-whiteboard
