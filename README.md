@@ -17,8 +17,10 @@ Computational labs and lectures for **ESS 412** (undergraduate) and **ESS 512** 
 | 4 — Reflection | — | 04a–b | Reflection/transmission coefficients, CMP, NMO, migration |
 | 5 — Surface Waves | [Surface Waves](lectures/surface-waves.md) | 05a–d | Rayleigh & Love waves, dispersion, ambient noise |
 | 6 — Earthquake Sources | [Inverse Problem](lectures/earthquake-location.md) | 06a | Earthquake location methods & uncertainties |
-| 7 — Moment Tensors & Magnitudes | [Moment Tensors](lectures/moment-tensor.md), [Radiation Patterns](lectures/07b-radiation-patterns.md), [Magnitudes](lectures/07c-magnitudes.md) | 07a–d | Moment tensor decomposition, radiation patterns, magnitude scales |
-| Optional | [Tomography](lectures/tomography-lecture-whiteboard.md) | — | Travel-time tomography, surface wave inversion |
+| 7 — Moment Tensors & Magnitudes | [Moment Tensors](lectures/moment-tensor.md), [Radiation Patterns](lectures/07b-radiation-patterns.md), [Magnitudes](lectures/07c-magnitudes.md), [Source Dynamics](lectures/07d_source_dynamic.md) | 07a–d | Moment tensor decomposition, radiation patterns, magnitude scales, source dynamics, stress drop, energy budget |
+| 8 — Earthquake Dynamics | [Nucleation & Dynamic Rupture](lectures/08_nucleation_dynamics.md) | 08 | Nucleation, dynamic rupture |
+| 9 — Synthesis & Frontiers | [Synthesis & Frontiers](lectures/09_synthesis_frontiers.md) | — | Course synthesis, research frontiers |
+| Optional | [Tomography](lectures/tomography-lecture-whiteboard.md) | Tomography, Inversion | Travel-time tomography, surface wave inversion |
 
 Each notebook includes a Colab badge — click it to run in Google Colab with no local setup.
 
@@ -40,7 +42,7 @@ pixi install
 ## Repository Structure
 
 ```
-notebooks/          Jupyter labs (01–07, named {Module}_{Topic}_{Type}.ipynb)
+notebooks/          Jupyter labs (01–08, named {Module}_{Topic}_{Type}.ipynb)
 lectures/           MyST Markdown lecture notes
 homework/           Assignments (midterm)
 solutions/          Instructor solutions
@@ -91,6 +93,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for notebook conventions, naming, and val
 - Course structure based on Peter Shearer's *Introduction to Seismology* (Cambridge University Press)
 - Built with [ObsPy](https://obspy.org/), [Jupyter Book](https://jupyterbook.org/), and [sphinxcontrib-bibtex](https://sphinxcontrib-bibtex.readthedocs.io/)
 - Seismic data from [Earthscope Consortium](https://www.earthscope.org/) via FDSN web services
+- Course was co-edited with a mix of ChatGPT 5.2 and Claude Sonnet 4.6 and Opus 4.6. AI was used to generate toy python examples, to synthesize book chapters, to relate course content to learning materials, to relate foundational course content to relevant scientific literature chosen 2023-2025.
 
 ## License
 
